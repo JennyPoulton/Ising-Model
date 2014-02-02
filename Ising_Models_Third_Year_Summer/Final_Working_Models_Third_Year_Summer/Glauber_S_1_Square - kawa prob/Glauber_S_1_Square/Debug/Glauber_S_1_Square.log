@@ -1,0 +1,17 @@
+﻿Build started 13/09/2013 14:25:58.
+     1>Project "C:\Users\Jenny\Documents\Visual Studio 2010\Projects\Ising_Models_Third_Year_Summer\Final_Working_Models_Third_Year_Summer\Glauber_S_1_Square - kawa prob\Glauber_S_1_Square\Glauber_S_1_Square.vcxproj" on node 2 (build target(s)).
+     1>InitializeBuildStatus:
+         Creating "Debug\Glauber_S_1_Square.unsuccessfulbuild" because "AlwaysCreate" was specified.
+       ClCompile:
+         All outputs are up-to-date.
+       Link:
+         All outputs are up-to-date.
+         Glauber_S_1_Square.vcxproj -> C:\Users\Jenny\Documents\Visual Studio 2010\Projects\Ising_Models_Third_Year_Summer\Final_Working_Models_Third_Year_Summer\Glauber_S_1_Square - kawa prob\Debug\Glauber_S_1_Square.exe
+       FinalizeBuildStatus:
+         Deleting file "Debug\Glauber_S_1_Square.unsuccessfulbuild".
+         Touching "Debug\Glauber_S_1_Square.lastbuildstate".
+     1>Done Building Project "C:\Users\Jenny\Documents\Visual Studio 2010\Projects\Ising_Models_Third_Year_Summer\Final_Working_Models_Third_Year_Summer\Glauber_S_1_Square - kawa prob\Glauber_S_1_Square\Glauber_S_1_Square.vcxproj" (build target(s)).
+
+Build succeeded.
+
+Time Elapsed 00:00:00.05

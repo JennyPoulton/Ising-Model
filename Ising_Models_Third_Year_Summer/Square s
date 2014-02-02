@@ -1,0 +1,24 @@
+﻿Build started 28/11/2013 13:11:24.
+     1>Project "C:\Users\Jenny\Documents\Visual Studio 2010\Projects\Ising_Models_Third_Year_Summer\Square s=1 to 4 Kawasaki\Kawasaki_s_1_4_newkind\Kawasaki_s_1_4_newkind\Kawasaki_s_1_4_newkind.vcxproj" on node 2 (build target(s)).
+     1>InitializeBuildStatus:
+         Creating "Debug\Kawasaki_s_1_4_newkind.unsuccessfulbuild" because "AlwaysCreate" was specified.
+       ClCompile:
+         c:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /Od /Oy- /D _MBCS /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc100.pdb" /Gd /TP /analyze- /errorReport:prompt Main.cpp
+         Main.cpp
+     1>c:\users\jenny\documents\visual studio 2010\projects\ising_models_third_year_summer\square s=1 to 4 kawasaki\kawasaki_s_1_4_newkind\kawasaki_s_1_4_newkind\main.cpp(21): warning C4244: 'argument' : conversion from 'time_t' to 'unsigned int', possible loss of data
+       Link:
+         c:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\Jenny\Documents\Visual Studio 2010\Projects\Ising_Models_Third_Year_Summer\Square s=1 to 4 Kawasaki\Kawasaki_s_1_4_newkind\Debug\Kawasaki_s_1_4_newkind.exe" /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /ManifestFile:"Debug\Kawasaki_s_1_4_newkind.exe.intermediate.manifest" /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /DEBUG /PDB:"C:\Users\Jenny\Documents\Visual Studio 2010\Projects\Ising_Models_Third_Year_Summer\Square s=1 to 4 Kawasaki\Kawasaki_s_1_4_newkind\Debug\Kawasaki_s_1_4_newkind.pdb" /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\Users\Jenny\Documents\Visual Studio 2010\Projects\Ising_Models_Third_Year_Summer\Square s=1 to 4 Kawasaki\Kawasaki_s_1_4_newkind\Debug\Kawasaki_s_1_4_newkind.lib" /MACHINE:X86 Debug\Main.obj
+         Debug\Particle.obj
+         Debug\System.obj
+         LINK : C:\Users\Jenny\Documents\Visual Studio 2010\Projects\Ising_Models_Third_Year_Summer\Square s=1 to 4 Kawasaki\Kawasaki_s_1_4_newkind\Debug\Kawasaki_s_1_4_newkind.exe not found or not built by the last incremental link; performing full link
+         Kawasaki_s_1_4_newkind.vcxproj -> C:\Users\Jenny\Documents\Visual Studio 2010\Projects\Ising_Models_Third_Year_Summer\Square s=1 to 4 Kawasaki\Kawasaki_s_1_4_newkind\Debug\Kawasaki_s_1_4_newkind.exe
+       Manifest:
+         C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\bin\mt.exe /nologo /verbose /outputresource:"C:\Users\Jenny\Documents\Visual Studio 2010\Projects\Ising_Models_Third_Year_Summer\Square s=1 to 4 Kawasaki\Kawasaki_s_1_4_newkind\Debug\Kawasaki_s_1_4_newkind.exe;#1" /manifest Debug\Kawasaki_s_1_4_newkind.exe.intermediate.manifest
+       FinalizeBuildStatus:
+         Deleting file "Debug\Kawasaki_s_1_4_newkind.unsuccessfulbuild".
+         Touching "Debug\Kawasaki_s_1_4_newkind.lastbuildstate".
+     1>Done Building Project "C:\Users\Jenny\Documents\Visual Studio 2010\Projects\Ising_Models_Third_Year_Summer\Square s=1 to 4 Kawasaki\Kawasaki_s_1_4_newkind\Kawasaki_s_1_4_newkind\Kawasaki_s_1_4_newkind.vcxproj" (build target(s)).
+
+Build succeeded.
+
+Time Elapsed 00:00:01.86

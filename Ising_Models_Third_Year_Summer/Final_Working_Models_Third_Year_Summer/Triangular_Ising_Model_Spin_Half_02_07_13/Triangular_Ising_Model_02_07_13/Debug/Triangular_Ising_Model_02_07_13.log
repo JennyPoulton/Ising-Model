@@ -1,0 +1,21 @@
+﻿Build started 11/07/2013 10:06:45.
+     1>Project "C:\Users\Jenny\Documents\Visual Studio 2010\Projects\Ising_Models_Third_Year_Summer\Triangular_Ising_Model_Spin_Half_02_07_13\Triangular_Ising_Model_02_07_13\Triangular_Ising_Model_02_07_13.vcxproj" on node 2 (build target(s)).
+     1>InitializeBuildStatus:
+         Creating "Debug\Triangular_Ising_Model_02_07_13.unsuccessfulbuild" because "AlwaysCreate" was specified.
+       ClCompile:
+         c:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /Od /Oy- /D _MBCS /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc100.pdb" /Gd /TP /analyze- /errorReport:prompt Main.cpp Particle.cpp System.cpp
+         System.cpp
+     1>c:\users\jenny\documents\visual studio 2010\projects\ising_models_third_year_summer\triangular_ising_model_spin_half_02_07_13\triangular_ising_model_02_07_13\system.cpp(294): error C2039: 'Set_A_or_F' : is not a member of 'System'
+                 c:\users\jenny\documents\visual studio 2010\projects\ising_models_third_year_summer\triangular_ising_model_spin_half_02_07_13\triangular_ising_model_02_07_13\system.h(9) : see declaration of 'System'
+     1>c:\users\jenny\documents\visual studio 2010\projects\ising_models_third_year_summer\triangular_ising_model_spin_half_02_07_13\triangular_ising_model_02_07_13\system.cpp(296): error C2065: 'Anti_or_Ferro' : undeclared identifier
+         Particle.cpp
+         Main.cpp
+     1>c:\users\jenny\documents\visual studio 2010\projects\ising_models_third_year_summer\triangular_ising_model_spin_half_02_07_13\triangular_ising_model_02_07_13\main.cpp(20): warning C4244: 'argument' : conversion from 'time_t' to 'unsigned int', possible loss of data
+     1>c:\users\jenny\documents\visual studio 2010\projects\ising_models_third_year_summer\triangular_ising_model_spin_half_02_07_13\triangular_ising_model_02_07_13\main.cpp(37): error C2039: 'Set_A_or_F' : is not a member of 'System'
+                 c:\users\jenny\documents\visual studio 2010\projects\ising_models_third_year_summer\triangular_ising_model_spin_half_02_07_13\triangular_ising_model_02_07_13\system.h(9) : see declaration of 'System'
+         Generating Code...
+     1>Done Building Project "C:\Users\Jenny\Documents\Visual Studio 2010\Projects\Ising_Models_Third_Year_Summer\Triangular_Ising_Model_Spin_Half_02_07_13\Triangular_Ising_Model_02_07_13\Triangular_Ising_Model_02_07_13.vcxproj" (build target(s)) -- FAILED.
+
+Build FAILED.
+
+Time Elapsed 00:00:03.32

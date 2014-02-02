@@ -1,0 +1,391 @@
+This is pdfTeX, Version 3.1415926-2.3-1.40.12 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2013.1.7)  18 SEP 2013 12:04
+entering extended mode
+**C:/Users/Jenny/Documents/Visual*Studio*2010/Projects/Ising_Models_Third_Year_
+Summer/LaTeK/Jenny.tex
+
+("C:/Users/Jenny/Documents/Visual Studio 2010/Projects/Ising_Models_Third_Year_
+Summer/LaTeK/Jenny.tex"
+LaTeX2e <2011/06/27>
+Babel <v3.8m> and hyphenation patterns for english, afrikaans, ancientgreek, ar
+abic, armenian, assamese, basque, bengali, bokmal, bulgarian, catalan, coptic, 
+croatian, czech, danish, dutch, esperanto, estonian, farsi, finnish, french, ga
+lician, german, german-x-2009-06-19, greek, gujarati, hindi, hungarian, iceland
+ic, indonesian, interlingua, irish, italian, kannada, kurmanji, lao, latin, lat
+vian, lithuanian, malayalam, marathi, mongolian, mongolianlmc, monogreek, ngerm
+an, ngerman-x-2009-06-19, nynorsk, oriya, panjabi, pinyin, polish, portuguese, 
+romanian, russian, sanskrit, serbian, slovak, slovenian, spanish, swedish, swis
+sgerman, tamil, telugu, turkish, turkmen, ukenglish, ukrainian, uppersorbian, u
+senglishmax, welsh, loaded.
+("C:\Program Files\MiKTeX 2.9\tex\latex\base\article.cls"
+Document Class: article 2007/10/19 v1.4h Standard LaTeX document class
+("C:\Program Files\MiKTeX 2.9\tex\latex\base\size10.clo"
+File: size10.clo 2007/10/19 v1.4h Standard LaTeX file (size option)
+)
+\c@part=\count79
+\c@section=\count80
+\c@subsection=\count81
+\c@subsubsection=\count82
+\c@paragraph=\count83
+\c@subparagraph=\count84
+\c@figure=\count85
+\c@table=\count86
+\abovecaptionskip=\skip41
+\belowcaptionskip=\skip42
+\bibindent=\dimen102
+)
+("C:\Program Files\MiKTeX 2.9\tex\latex\graphics\graphicx.sty"
+Package: graphicx 1999/02/16 v1.0f Enhanced LaTeX Graphics (DPC,SPQR)
+
+("C:\Program Files\MiKTeX 2.9\tex\latex\graphics\keyval.sty"
+Package: keyval 1999/03/16 v1.13 key=value parser (DPC)
+\KV@toks@=\toks14
+)
+("C:\Program Files\MiKTeX 2.9\tex\latex\graphics\graphics.sty"
+Package: graphics 2009/02/05 v1.0o Standard LaTeX Graphics (DPC,SPQR)
+
+("C:\Program Files\MiKTeX 2.9\tex\latex\graphics\trig.sty"
+Package: trig 1999/03/16 v1.09 sin cos tan (DPC)
+)
+("C:\Program Files\MiKTeX 2.9\tex\latex\00miktex\graphics.cfg"
+File: graphics.cfg 2007/01/18 v1.5 graphics configuration of teTeX/TeXLive
+)
+Package graphics Info: Driver file: pdftex.def on input line 91.
+
+("C:\Program Files\MiKTeX 2.9\tex\latex\pdftex-def\pdftex.def"
+File: pdftex.def 2011/05/27 v0.06d Graphics/color for pdfTeX
+
+("C:\Program Files\MiKTeX 2.9\tex\generic\oberdiek\infwarerr.sty"
+Package: infwarerr 2010/04/08 v1.3 Providing info/warning/error messages (HO)
+)
+("C:\Program Files\MiKTeX 2.9\tex\generic\oberdiek\ltxcmds.sty"
+Package: ltxcmds 2011/11/09 v1.22 LaTeX kernel commands for general use (HO)
+)
+\Gread@gobject=\count87
+))
+\Gin@req@height=\dimen103
+\Gin@req@width=\dimen104
+)
+(C:\Users\Jenny\AppData\Roaming\MiKTeX\2.9\tex\latex\preprint\fullpage.sty
+Package: fullpage 1999/02/23 1.1 (PWD)
+\FP@margin=\skip43
+)
+(C:\Users\Jenny\AppData\Roaming\MiKTeX\2.9\tex\latex\appendix\appendix.sty
+Package: appendix 2009/09/02 v1.2b extra appendix facilities
+\c@@pps=\count88
+\c@@ppsavesec=\count89
+\c@@ppsaveapp=\count90
+)
+(C:\Users\Jenny\AppData\Roaming\MiKTeX\2.9\tex\latex\microtype\microtype.sty
+Package: microtype 2010/01/10 v2.4 Micro-typography with pdfTeX (RS)
+\MT@toks=\toks15
+\MT@count=\count91
+LaTeX Info: Redefining \lsstyle on input line 1597.
+LaTeX Info: Redefining \lslig on input line 1597.
+\MT@outer@space=\skip44
+LaTeX Info: Redefining \textls on input line 1605.
+\MT@outer@kern=\dimen105
+LaTeX Info: Redefining \textmicrotypecontext on input line 2156.
+Package microtype Info: Loading configuration file microtype.cfg.
+
+(C:\Users\Jenny\AppData\Roaming\MiKTeX\2.9\tex\latex\microtype\microtype.cfg
+File: microtype.cfg 2010/01/10 v2.4 microtype main configuration file (RS)
+))
+(C:\Users\Jenny\AppData\Roaming\MiKTeX\2.9\tex\latex\mh\mathtools.sty
+Package: mathtools 2012/04/24 v1.12 mathematical typesetting tools
+
+("C:\Program Files\MiKTeX 2.9\tex\latex\tools\calc.sty"
+Package: calc 2007/08/22 v4.3 Infix arithmetic (KKT,FJ)
+\calc@Acount=\count92
+\calc@Bcount=\count93
+\calc@Adimen=\dimen106
+\calc@Bdimen=\dimen107
+\calc@Askip=\skip45
+\calc@Bskip=\skip46
+LaTeX Info: Redefining \setlength on input line 76.
+LaTeX Info: Redefining \addtolength on input line 77.
+\calc@Ccount=\count94
+\calc@Cskip=\skip47
+)
+(C:\Users\Jenny\AppData\Roaming\MiKTeX\2.9\tex\latex\mh\mhsetup.sty
+Package: mhsetup 2010/01/21 v1.2a programming setup (MH)
+)
+("C:\Program Files\MiKTeX 2.9\tex\latex\ams\math\amsmath.sty"
+Package: amsmath 2000/07/18 v2.13 AMS math features
+\@mathmargin=\skip48
+
+For additional information on amsmath, use the `?' option.
+("C:\Program Files\MiKTeX 2.9\tex\latex\ams\math\amstext.sty"
+Package: amstext 2000/06/29 v2.01
+
+("C:\Program Files\MiKTeX 2.9\tex\latex\ams\math\amsgen.sty"
+File: amsgen.sty 1999/11/30 v2.0
+\@emptytoks=\toks16
+\ex@=\dimen108
+))
+("C:\Program Files\MiKTeX 2.9\tex\latex\ams\math\amsbsy.sty"
+Package: amsbsy 1999/11/29 v1.2d
+\pmbraise@=\dimen109
+)
+("C:\Program Files\MiKTeX 2.9\tex\latex\ams\math\amsopn.sty"
+Package: amsopn 1999/12/14 v2.01 operator names
+)
+\inf@bad=\count95
+LaTeX Info: Redefining \frac on input line 211.
+\uproot@=\count96
+\leftroot@=\count97
+LaTeX Info: Redefining \overline on input line 307.
+\classnum@=\count98
+\DOTSCASE@=\count99
+LaTeX Info: Redefining \ldots on input line 379.
+LaTeX Info: Redefining \dots on input line 382.
+LaTeX Info: Redefining \cdots on input line 467.
+\Mathstrutbox@=\box26
+\strutbox@=\box27
+\big@size=\dimen110
+LaTeX Font Info:    Redeclaring font encoding OML on input line 567.
+LaTeX Font Info:    Redeclaring font encoding OMS on input line 568.
+\macc@depth=\count100
+\c@MaxMatrixCols=\count101
+\dotsspace@=\muskip10
+\c@parentequation=\count102
+\dspbrk@lvl=\count103
+\tag@help=\toks17
+\row@=\count104
+\column@=\count105
+\maxfields@=\count106
+\andhelp@=\toks18
+\eqnshift@=\dimen111
+\alignsep@=\dimen112
+\tagshift@=\dimen113
+\tagwidth@=\dimen114
+\totwidth@=\dimen115
+\lineht@=\dimen116
+\@envbody=\toks19
+\multlinegap=\skip49
+\multlinetaggap=\skip50
+\mathdisplay@stack=\toks20
+LaTeX Info: Redefining \[ on input line 2666.
+LaTeX Info: Redefining \] on input line 2667.
+)
+\g_MT_multlinerow_int=\count107
+\l_MT_multwidth_dim=\dimen117
+\origjot=\skip51
+\l_MT_shortvdotswithinadjustabove_dim=\dimen118
+\l_MT_shortvdotswithinadjustbelow_dim=\dimen119
+\l_MT_above_intertext_dim=\dimen120
+\l_MT_below_intertext_dim=\dimen121
+\l_MT_above_shortintertext_dim=\dimen122
+\l_MT_below_shortintertext_dim=\dimen123
+)
+("C:\Program Files\MiKTeX 2.9\tex\latex\amsfonts\amssymb.sty"
+Package: amssymb 2009/06/22 v3.00
+
+("C:\Program Files\MiKTeX 2.9\tex\latex\amsfonts\amsfonts.sty"
+Package: amsfonts 2009/06/22 v3.00 Basic AMSFonts support
+\symAMSa=\mathgroup4
+\symAMSb=\mathgroup5
+LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
+(Font)                  U/euf/m/n --> U/euf/b/n on input line 96.
+))
+("C:\Program Files\MiKTeX 2.9\tex\latex\ams\classes\amsthm.sty"
+Package: amsthm 2004/08/06 v2.20
+\thm@style=\toks21
+\thm@bodyfont=\toks22
+\thm@headfont=\toks23
+\thm@notefont=\toks24
+\thm@headpunct=\toks25
+\thm@preskip=\skip52
+\thm@postskip=\skip53
+\thm@headsep=\skip54
+\dth@everypar=\toks26
+)
+("C:\Program Files\MiKTeX 2.9\tex\latex\jknappen\mathrsfs.sty"
+Package: mathrsfs 1996/01/01 Math RSFS package v1.0 (jk)
+\symrsfs=\mathgroup6
+)
+("C:\Users\Jenny\Documents\Visual Studio 2010\Projects\Ising_Models_Third_Year_
+Summer\LaTeK\Jenny.aux")
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 14.
+LaTeX Font Info:    ... okay on input line 14.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 14.
+LaTeX Font Info:    ... okay on input line 14.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 14.
+LaTeX Font Info:    ... okay on input line 14.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 14.
+LaTeX Font Info:    ... okay on input line 14.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 14.
+LaTeX Font Info:    ... okay on input line 14.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 14.
+LaTeX Font Info:    ... okay on input line 14.
+
+(C:\Users\Jenny\AppData\Roaming\MiKTeX\2.9\tex\context\base\supp-pdf.mkii
+[Loading MPS to PDF converter (version 2006.09.02).]
+\scratchcounter=\count108
+\scratchdimen=\dimen124
+\scratchbox=\box28
+\nofMPsegments=\count109
+\nofMParguments=\count110
+\everyMPshowfont=\toks27
+\MPscratchCnt=\count111
+\MPscratchDim=\dimen125
+\MPnumerator=\count112
+\makeMPintoPDFobject=\count113
+\everyMPtoPDFconversion=\toks28
+)
+LaTeX Info: Redefining \microtypecontext on input line 14.
+Package microtype Info: Generating PDF output.
+Package microtype Info: Character protrusion enabled (level 2).
+Package microtype Info: Using default protrusion set `alltext'.
+Package microtype Info: Automatic font expansion enabled (level 2),
+(microtype)             stretch: 20, shrink: 20, step: 1, non-selected.
+Package microtype Info: Using default expansion set `basictext'.
+Package microtype Info: No tracking.
+Package microtype Info: No adjustment of interword spacing.
+Package microtype Info: No adjustment of character kerning.
+ (C:\Users\Jenny\AppData\Roaming\MiKTeX\2.9\tex\latex\microtype\mt-cmr.cfg
+File: mt-cmr.cfg 2009/11/09 v2.0 microtype config. file: Computer Modern Roman 
+(RS)
+)
+LaTeX Font Info:    Try loading font information for U+msa on input line 16.
+
+("C:\Program Files\MiKTeX 2.9\tex\latex\amsfonts\umsa.fd"
+File: umsa.fd 2009/06/22 v3.00 AMS symbols A
+)
+(C:\Users\Jenny\AppData\Roaming\MiKTeX\2.9\tex\latex\microtype\mt-msa.cfg
+File: mt-msa.cfg 2006/02/04 v1.1 microtype config. file: AMS symbols (a) (RS)
+)
+LaTeX Font Info:    Try loading font information for U+msb on input line 16.
+
+("C:\Program Files\MiKTeX 2.9\tex\latex\amsfonts\umsb.fd"
+File: umsb.fd 2009/06/22 v3.00 AMS symbols B
+)
+(C:\Users\Jenny\AppData\Roaming\MiKTeX\2.9\tex\latex\microtype\mt-msb.cfg
+File: mt-msb.cfg 2005/06/01 v1.0 microtype config. file: AMS symbols (b) (RS)
+)
+LaTeX Font Info:    Try loading font information for U+rsfs on input line 16.
+
+("C:\Program Files\MiKTeX 2.9\tex\latex\jknappen\ursfs.fd"
+File: ursfs.fd 1998/03/24 rsfs font definition file (jk)
+) [1
+
+{C:/Users/Jenny/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}]
+<Spin_1.png, id=15, 481.8pt x 291.33844pt>
+File: Spin_1.png Graphic file (type png)
+ <use Spin_1.png>
+Package pdftex.def Info: Spin_1.png used on input line 62.
+(pdftex.def)             Requested size: 361.3491pt x 218.50328pt.
+
+<Spin_2.png, id=16, 481.8pt x 291.33844pt>
+File: Spin_2.png Graphic file (type png)
+ <use Spin_2.png>
+Package pdftex.def Info: Spin_2.png used on input line 72.
+(pdftex.def)             Requested size: 361.3491pt x 218.50328pt.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+<Spin_3.png, id=17, 481.8pt x 291.33844pt>
+File: Spin_3.png Graphic file (type png)
+ <use Spin_3.png>
+Package pdftex.def Info: Spin_3.png used on input line 80.
+(pdftex.def)             Requested size: 361.3491pt x 218.50328pt.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+<Mag_G.png, id=18, 481.8pt x 291.33844pt>
+File: Mag_G.png Graphic file (type png)
+ <use Mag_G.png>
+Package pdftex.def Info: Mag_G.png used on input line 88.
+(pdftex.def)             Requested size: 361.3491pt x 218.50328pt.
+
+<Mag_G_BCP.png, id=19, 481.8pt x 291.33844pt>
+File: Mag_G_BCP.png Graphic file (type png)
+ <use Mag_G_BCP.png>
+Package pdftex.def Info: Mag_G_BCP.png used on input line 97.
+(pdftex.def)             Requested size: 361.3491pt x 218.50328pt.
+
+<Mag_K.png, id=20, 481.8pt x 291.33844pt>
+File: Mag_K.png Graphic file (type png)
+ <use Mag_K.png>
+Package pdftex.def Info: Mag_K.png used on input line 105.
+(pdftex.def)             Requested size: 361.3491pt x 218.50328pt.
+
+<Mag_K_BCP.png, id=21, 481.8pt x 291.33844pt>
+File: Mag_K_BCP.png Graphic file (type png)
+ <use Mag_K_BCP.png>
+Package pdftex.def Info: Mag_K_BCP.png used on input line 113.
+(pdftex.def)             Requested size: 361.3491pt x 218.50328pt.
+
+<Prob_G.png, id=22, 481.8pt x 291.33844pt>
+File: Prob_G.png Graphic file (type png)
+ <use Prob_G.png>
+Package pdftex.def Info: Prob_G.png used on input line 121.
+(pdftex.def)             Requested size: 361.3491pt x 218.50328pt.
+
+<Prob_K.png, id=23, 481.8pt x 291.33844pt>
+File: Prob_K.png Graphic file (type png)
+ <use Prob_K.png>
+Package pdftex.def Info: Prob_K.png used on input line 129.
+(pdftex.def)             Requested size: 361.3491pt x 218.50328pt.
+
+<Energy.png, id=24, 481.8pt x 291.33844pt>
+File: Energy.png Graphic file (type png)
+ <use Energy.png>
+Package pdftex.def Info: Energy.png used on input line 137.
+(pdftex.def)             Requested size: 361.3491pt x 218.50328pt.
+
+<Heat_Capacity.png, id=25, 481.8pt x 291.33844pt>
+File: Heat_Capacity.png Graphic file (type png)
+ <use Heat_Capacity.png>
+Package pdftex.def Info: Heat_Capacity.png used on input line 145.
+(pdftex.def)             Requested size: 361.3491pt x 218.50328pt.
+
+<Entropy.png, id=26, 481.8pt x 291.33844pt>
+File: Entropy.png Graphic file (type png)
+ <use Entropy.png>
+Package pdftex.def Info: Entropy.png used on input line 153.
+(pdftex.def)             Requested size: 361.3491pt x 218.50328pt.
+ [2 <C:/Users/Jenny/Documents/Visual Studio 2010/Projects/Ising_Models_Third_Ye
+ar_Summer/LaTeK/Spin_1.png>] [3 <C:/Users/Jenny/Documents/Visual Studio 2010/Pr
+ojects/Ising_Models_Third_Year_Summer/LaTeK/Spin_2.png> <C:/Users/Jenny/Documen
+ts/Visual Studio 2010/Projects/Ising_Models_Third_Year_Summer/LaTeK/Spin_3.png>
+] [4 <C:/Users/Jenny/Documents/Visual Studio 2010/Projects/Ising_Models_Third_Y
+ear_Summer/LaTeK/Mag_G.png> <C:/Users/Jenny/Documents/Visual Studio 2010/Projec
+ts/Ising_Models_Third_Year_Summer/LaTeK/Mag_G_BCP.png>] [5 <C:/Users/Jenny/Docu
+ments/Visual Studio 2010/Projects/Ising_Models_Third_Year_Summer/LaTeK/Mag_K.pn
+g> <C:/Users/Jenny/Documents/Visual Studio 2010/Projects/Ising_Models_Third_Yea
+r_Summer/LaTeK/Mag_K_BCP.png>] [6 <C:/Users/Jenny/Documents/Visual Studio 2010/
+Projects/Ising_Models_Third_Year_Summer/LaTeK/Prob_G.png> <C:/Users/Jenny/Docum
+ents/Visual Studio 2010/Projects/Ising_Models_Third_Year_Summer/LaTeK/Prob_K.pn
+g>] [7 <C:/Users/Jenny/Documents/Visual Studio 2010/Projects/Ising_Models_Third
+_Year_Summer/LaTeK/Energy.png> <C:/Users/Jenny/Documents/Visual Studio 2010/Pro
+jects/Ising_Models_Third_Year_Summer/LaTeK/Heat_Capacity.png>] [8 <C:/Users/Jen
+ny/Documents/Visual Studio 2010/Projects/Ising_Models_Third_Year_Summer/LaTeK/E
+ntropy.png>]
+("C:\Users\Jenny\Documents\Visual Studio 2010\Projects\Ising_Models_Third_Year_
+Summer\LaTeK\Jenny.aux") ) 
+Here is how much of TeX's memory you used:
+ 4343 strings out of 494045
+ 64334 string characters out of 3148388
+ 155487 words of memory out of 3000000
+ 7525 multiletter control sequences out of 15000+200000
+ 13197 words of font info for 75 fonts, out of 3000000 for 9000
+ 715 hyphenation exceptions out of 8191
+ 33i,14n,35p,792b,259s stack positions out of 5000i,500n,10000p,200000b,50000s
+<C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfo
+nts/cm/cmbx12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/c
+mex10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi10.pf
+b><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi7.pfb><C:/Pro
+gram Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Program File
+s/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Program Files/MiKTeX 
+2.9/fonts/type1/public/amsfonts/cm/cmr17.pfb><C:/Program Files/MiKTeX 2.9/fonts
+/type1/public/amsfonts/cm/cmr7.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/pub
+lic/amsfonts/cm/cmsy10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsf
+onts/cm/cmsy7.pfb>
+Output written on Jenny.pdf (8 pages, 381312 bytes).
+PDF statistics:
+ 81 PDF objects out of 1000 (max. 8388607)
+ 0 named destinations out of 1000 (max. 500000)
+ 9277 words of extra memory for PDF output out of 10000 (max. 10000000)
+

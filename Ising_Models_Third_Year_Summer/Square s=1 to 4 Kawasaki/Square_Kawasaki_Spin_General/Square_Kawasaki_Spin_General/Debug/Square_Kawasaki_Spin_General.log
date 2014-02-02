@@ -1,0 +1,21 @@
+﻿Build started 05/09/2013 15:02:25.
+     1>Project "c:\Users\Jenny\documents\visual studio 2010\Projects\Square_Kawasaki_Spin_General\Square_Kawasaki_Spin_General\Square_Kawasaki_Spin_General.vcxproj" on node 2 (build target(s)).
+     1>InitializeBuildStatus:
+         Touching "Debug\Square_Kawasaki_Spin_General.unsuccessfulbuild".
+       ClCompile:
+         c:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /Od /Oy- /D _MBCS /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc100.pdb" /Gd /TP /analyze- /errorReport:prompt Particle.cpp System.cpp
+         Particle.cpp
+         Generating Code...
+         Compiling...
+         System.cpp
+         Generating Code...
+       Link:
+         c:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"c:\users\jenny\documents\visual studio 2010\Projects\Square_Kawasaki_Spin_General\Debug\Square_Kawasaki_Spin_General.exe" /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /ManifestFile:"Debug\Square_Kawasaki_Spin_General.exe.intermediate.manifest" /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /DEBUG /PDB:"c:\users\jenny\documents\visual studio 2010\Projects\Square_Kawasaki_Spin_General\Debug\Square_Kawasaki_Spin_General.pdb" /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"c:\users\jenny\documents\visual studio 2010\Projects\Square_Kawasaki_Spin_General\Debug\Square_Kawasaki_Spin_General.lib" /MACHINE:X86 Debug\Main.obj
+         Debug\Particle.obj
+         Debug\System.obj
+     1>LINK : fatal error LNK1561: entry point must be defined
+     1>Done Building Project "c:\Users\Jenny\documents\visual studio 2010\Projects\Square_Kawasaki_Spin_General\Square_Kawasaki_Spin_General\Square_Kawasaki_Spin_General.vcxproj" (build target(s)) -- FAILED.
+
+Build FAILED.
+
+Time Elapsed 00:00:00.56

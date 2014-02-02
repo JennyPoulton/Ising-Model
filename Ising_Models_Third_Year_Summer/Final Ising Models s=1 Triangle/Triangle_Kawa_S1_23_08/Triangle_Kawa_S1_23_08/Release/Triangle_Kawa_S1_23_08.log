@@ -1,0 +1,13 @@
+﻿Build started 05/09/2013 11:12:53.
+     1>Project "C:\Users\Jenny\Documents\Visual Studio 2010\Projects\Triangle_Kawa_S1_23_08\Triangle_Kawa_S1_23_08\Triangle_Kawa_S1_23_08.vcxproj" on node 2 (build target(s)).
+     1>InitializeBuildStatus:
+         Touching "Release\Triangle_Kawa_S1_23_08.unsuccessfulbuild".
+       ClCompile:
+         c:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /Zi /nologo /W3 /WX- /O2 /Oi /Oy- /GL /D _MBCS /Gm- /EHsc /MD /GS /Gy /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Release\\" /Fd"Release\vc100.pdb" /Gd /TP /analyze- /errorReport:prompt System.cpp
+         System.cpp
+     1>System.cpp(5): fatal error C1083: Cannot open include file: 'boost/random/mersenne_twister.hpp': No such file or directory
+     1>Done Building Project "C:\Users\Jenny\Documents\Visual Studio 2010\Projects\Triangle_Kawa_S1_23_08\Triangle_Kawa_S1_23_08\Triangle_Kawa_S1_23_08.vcxproj" (build target(s)) -- FAILED.
+
+Build FAILED.
+
+Time Elapsed 00:00:00.14
