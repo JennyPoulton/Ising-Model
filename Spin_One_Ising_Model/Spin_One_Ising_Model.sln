@@ -1,0 +1,20 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Spin_One_Ising_Model", "Spin_One_Ising_Model\Spin_One_Ising_Model.vcxproj", "{AD5140D3-5343-493B-B587-FE64DB93853F}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Win32 = Debug|Win32
+		Release|Win32 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{AD5140D3-5343-493B-B587-FE64DB93853F}.Debug|Win32.ActiveCfg = Debug|Win32
+		{AD5140D3-5343-493B-B587-FE64DB93853F}.Debug|Win32.Build.0 = Debug|Win32
+		{AD5140D3-5343-493B-B587-FE64DB93853F}.Release|Win32.ActiveCfg = Release|Win32
+		{AD5140D3-5343-493B-B587-FE64DB93853F}.Release|Win32.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
