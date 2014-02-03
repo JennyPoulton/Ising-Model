@@ -4,12 +4,12 @@
 int main (void)
 {
 
-	int Up[ISINGSIZE*ISINGSIZE];		// define the up lattice to hold 
-	int Down[ISINGSIZE*ISINGSIZE];		// the values up from those in 
-	int Left[ISINGSIZE*ISINGSIZE];		// the respective position in lattice
-	int Right[ISINGSIZE*ISINGSIZE];
+	int* Up[ISINGSIZE*ISINGSIZE];		// define the up lattice to hold 
+	int* Down[ISINGSIZE*ISINGSIZE];		// the values up from those in 
+	int* Left[ISINGSIZE*ISINGSIZE];		// the respective position in lattice
+	int* Right[ISINGSIZE*ISINGSIZE];
 
-	int* Lattice[ISINGSIZE*ISINGSIZE]; //define the main lattice
+	int Lattice[ISINGSIZE*ISINGSIZE]; //define the main lattice
 
 	for(int x=0; x<(ISINGSIZE*ISINGSIZE); x++)
 	{
@@ -20,10 +20,10 @@ int main (void)
 	for(int x=0; x<(ISINGSIZE*ISINGSIZE); x++)
 	{
 
-		Up[x]=*Lattice[((ISINGSIZE*ISINGSIZE)+x-ISINGSIZE)%(ISINGSIZE*ISINGSIZE)];		//set the surrounding lattice values 
-		Down[x]=*Lattice[((ISINGSIZE*ISINGSIZE)+x+ISINGSIZE)%(ISINGSIZE*ISINGSIZE)];	// equal to those in correct positions
-		Left[x]=*Lattice[((ISINGSIZE*ISINGSIZE)+x-1)%(ISINGSIZE*ISINGSIZE)];			// in lattice
-		Right[x]=*Lattice[((ISINGSIZE*ISINGSIZE)+x+1)%(ISINGSIZE*ISINGSIZE)];
+		Up[x]=&Lattice[((ISINGSIZE*ISINGSIZE)+x-ISINGSIZE)%(ISINGSIZE*ISINGSIZE)];		//set the surrounding lattice values 
+		Down[x]=&Lattice[((ISINGSIZE*ISINGSIZE)+x+ISINGSIZE)%(ISINGSIZE*ISINGSIZE)];	// equal to those in correct positions
+		Left[x]=&Lattice[((ISINGSIZE*ISINGSIZE)+x-1)%(ISINGSIZE*ISINGSIZE)];			// in lattice
+		Right[x]=&Lattice[((ISINGSIZE*ISINGSIZE)+x+1)%(ISINGSIZE*ISINGSIZE)];
 
 	}
 
