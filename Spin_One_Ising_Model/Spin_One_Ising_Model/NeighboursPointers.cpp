@@ -26,10 +26,10 @@ System::System()
 			for(int x=0; x<ISINGSIZE; x++)
 			{
 
-				System.Up[x][y].Set_Spin(&Lattice[x][(ISINGSIZE+y-1)%(ISINGSIZE)]);		//set the surrounding lattice values 
-				System.Down[x][y].Set_Spin(&Lattice[x][(ISINGSIZE+y+1)%(ISINGSIZE)]);	// equal to those in correct positions
-				System.Left[x][y].Set_Spin(&Lattice[(ISINGSIZE+x-1)%(ISINGSIZE)][y]);			// in lattice
-				System.Right[x][y].Set_SPin(&Lattice[(ISINGSIZE+x+1)%(ISINGSIZE)][y]);
+				System.Up[x][y].spin = &System.Lattice[x][(ISINGSIZE+y-1)%(ISINGSIZE)].spin;		//set the surrounding lattice values 
+				System.Down[x][y].spin = &System.Lattice[x][(ISINGSIZE+y+1)%(ISINGSIZE)].spin;	// equal to those in correct positions
+				System.Left[x][y].spin = &System.Lattice[(ISINGSIZE+x-1)%(ISINGSIZE)][y].spin;			// in lattice
+				System.Right[x][y].spin = &System.Lattice[(ISINGSIZE+x+1)%(ISINGSIZE)][y].spin;
 
 			}
 		}

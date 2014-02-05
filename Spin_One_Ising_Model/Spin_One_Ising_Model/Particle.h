@@ -3,9 +3,9 @@
 
 class Particle
 {
-private:
+
 	int spin;
-public:
+
 	Particle();
 	int Flip_Spin_Up();
 	int Flip_Spin_Down();
