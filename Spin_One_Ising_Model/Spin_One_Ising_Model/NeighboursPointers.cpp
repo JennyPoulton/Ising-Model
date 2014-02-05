@@ -1,32 +1,47 @@
 #define ISINGSIZE 18 //must be a multiple of 3 and 2
 #include<cmath>
+#include "System.h"
 
-int main (void)
+System::System()
 {
 
-	int* Up[ISINGSIZE*ISINGSIZE];		// define the up lattice to hold 
-	int* Down[ISINGSIZE*ISINGSIZE];		// the values up from those in 
-	int* Left[ISINGSIZE*ISINGSIZE];		// the respective position in lattice
-	int* Right[ISINGSIZE*ISINGSIZE];
+	//int* Up[ISINGSIZE][ISINGSIZE];		// define the up lattice to hold 
+	//int* Down[ISINGSIZE][ISINGSIZE];		// the values up from those in 
+	//int* Left[ISINGSIZE][ISINGSIZE];		// the respective position in lattice
+	//int* Right[ISINGSIZE][ISINGSIZE];
 
-	int Lattice[ISINGSIZE*ISINGSIZE]; //define the main lattice
+	int Lattice[ISINGSIZE][ISINGSIZE]; //define the main lattice
 
-	for(int x=0; x<(ISINGSIZE*ISINGSIZE); x++)
-	{
-		Lattice[x] = (int)(pow(-1,(float)x)); //set the main values
-	}
+	for(int x=0; x<(ISINGSIZE); x++)
+		for(int y=0; y<(ISINGSIZE); y++)
+		{
+			{
+				System.Lattice[x][y].Set_Spin((int)(pow(-1,(float)x))*(int)(pow(-1,(float)y))); //set the main values
+			}
+		}
 
 
-	for(int x=0; x<(ISINGSIZE*ISINGSIZE); x++)
-	{
+		for(int y=0; y<ISINGSIZE; y++)
+		{
+			for(int x=0; x<ISINGSIZE; x++)
+			{
 
-		Up[x]=&Lattice[((ISINGSIZE*ISINGSIZE)+x-ISINGSIZE)%(ISINGSIZE*ISINGSIZE)];		//set the surrounding lattice values 
-		Down[x]=&Lattice[((ISINGSIZE*ISINGSIZE)+x+ISINGSIZE)%(ISINGSIZE*ISINGSIZE)];	// equal to those in correct positions
-		Left[x]=&Lattice[((ISINGSIZE*ISINGSIZE)+x-1)%(ISINGSIZE*ISINGSIZE)];			// in lattice
-		Right[x]=&Lattice[((ISINGSIZE*ISINGSIZE)+x+1)%(ISINGSIZE*ISINGSIZE)];
+				System.Up[x][y].Set_Spin(&Lattice[x][(ISINGSIZE+y-1)%(ISINGSIZE)]);		//set the surrounding lattice values 
+				System.Down[x][y].Set_Spin(&Lattice[x][(ISINGSIZE+y+1)%(ISINGSIZE)]);	// equal to those in correct positions
+				System.Left[x][y].Set_Spin(&Lattice[(ISINGSIZE+x-1)%(ISINGSIZE)][y]);			// in lattice
+				System.Right[x][y].Set_SPin(&Lattice[(ISINGSIZE+x+1)%(ISINGSIZE)][y]);
 
-	}
+			}
+		}
 
-	return 0;
+	Find_Total_Energy();
+	Get_Probability();
+	
+	Current_Column=0;
+	Current_Row=0;
+
+	Set_Temp(0);
+
+		return;
 
 }
