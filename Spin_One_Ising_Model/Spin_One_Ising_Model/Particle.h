@@ -4,11 +4,13 @@
 class Particle
 {
 
+	public:
 	int spin;
+	int max_spin;
 
 	Particle();
-	int Flip_Spin_Up();
-	int Flip_Spin_Down();
+	void Flip_Spin_Up();
+	void Flip_Spin_Down();
 	int Return_Spin();
 	void Set_Spin(int Input_Spin);
 };

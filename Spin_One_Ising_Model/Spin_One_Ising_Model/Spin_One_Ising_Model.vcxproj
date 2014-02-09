@@ -61,6 +61,8 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="NeighboursPointers.cpp" />
+    <ClCompile Include="Particle.cpp" />
+    <ClCompile Include="System.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Particle.h" />

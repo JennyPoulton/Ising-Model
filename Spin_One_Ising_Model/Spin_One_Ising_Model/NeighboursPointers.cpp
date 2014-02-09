@@ -1,4 +1,3 @@
-#define ISINGSIZE 18 //must be a multiple of 3 and 2
 #include<cmath>
 #include "System.h"
 
@@ -10,13 +9,13 @@ System::System()
 	//int* Left[ISINGSIZE][ISINGSIZE];		// the respective position in lattice
 	//int* Right[ISINGSIZE][ISINGSIZE];
 
-	int Lattice[ISINGSIZE][ISINGSIZE]; //define the main lattice
+	//int Lattice[ISINGSIZE][ISINGSIZE]; //define the main lattice
 
 	for(int x=0; x<(ISINGSIZE); x++)
 		for(int y=0; y<(ISINGSIZE); y++)
 		{
 			{
-				System.Lattice[x][y].Set_Spin((int)(pow(-1,(float)x))*(int)(pow(-1,(float)y))); //set the main values
+				Lattice[x][y].Set_Spin((int)(pow(-1,(float)x))*(int)(pow(-1,(float)y))); //set the main values
 			}
 		}
 
@@ -26,10 +25,10 @@ System::System()
 			for(int x=0; x<ISINGSIZE; x++)
 			{
 
-				System.Up[x][y].spin = &System.Lattice[x][(ISINGSIZE+y-1)%(ISINGSIZE)].spin;		//set the surrounding lattice values 
-				System.Down[x][y].spin = &System.Lattice[x][(ISINGSIZE+y+1)%(ISINGSIZE)].spin;	// equal to those in correct positions
-				System.Left[x][y].spin = &System.Lattice[(ISINGSIZE+x-1)%(ISINGSIZE)][y].spin;			// in lattice
-				System.Right[x][y].spin = &System.Lattice[(ISINGSIZE+x+1)%(ISINGSIZE)][y].spin;
+				Up[x][y].spin=&Lattice[x][(ISINGSIZE+y-1)%(ISINGSIZE)].spin;		//set the surrounding lattice values 
+				Down[x][y].spin=&Lattice[x][(ISINGSIZE+y+1)%(ISINGSIZE)].spin;	// equal to those in correct positions
+				Left[x][y].spin=&Lattice[(ISINGSIZE+x-1)%(ISINGSIZE)][y].spin;			// in lattice
+				Right[x][y].spin=&Lattice[(ISINGSIZE+x+1)%(ISINGSIZE)][y].spin;
 
 			}
 		}
