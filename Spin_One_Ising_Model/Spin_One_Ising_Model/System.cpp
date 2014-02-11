@@ -130,4 +130,53 @@ void System::Update_Energy(int Energy_Difference)
 	return;
 }
 
+void System::Set_Temp(double Temperature)
+{
+	Temp=Temperature;
+	return;
+}
 
+double System::Return_Temp()
+{
+	return Temp;
+}
+
+void System::Get_Initial_Probability()
+{
+	for(int i=0; i<Lattice[0][0].Return_Max_Spin(); i++)
+	{
+		Probability[i]=0;
+	}
+	
+	for(int i=0; i<ISINGSIZE; i++)
+	{
+		for(int j=0; j<ISINGSIZE; j++)
+		{
+			
+			Probability[Lattice[i][j].Return_Spin()+Lattice[i][j].Return_Max_Spin()]++;
+
+		}
+	}
+}
+
+void System::Update_Probability(int Initial_Spin, int Final_Spin)
+{
+	Probability[Initial_Spin+Lattice[0][0].Return_Max_Spin()]--;
+	Probability[Final_Spin+Lattice[0][0].Return_Max_Spin()]++;
+	return;
+}
+
+int System::Return_Probability_One()
+{
+	return Probability[1+Lattice[0][0].Return_Max_Spin()];
+}
+
+int System::Return_Probability_Zero()
+{
+	return Probability[0+Lattice[0][0].Return_Max_Spin()];
+}
+
+int System::Return_Probability_Minus_One()
+{
+	return Probability[-1+Lattice[0][0].Return_Max_Spin()];
+}

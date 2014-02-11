@@ -17,7 +17,7 @@ class System
 		int Current_Column;
 		int Current_Row;
 		
-		int Probability[2];
+		int Probability[2];  //do dynamic allocation = max spin
 		
 		double Energy;
 		double Temp;
@@ -43,7 +43,7 @@ class System
 		void Set_Temp(double Temperature);
 		double Return_Temp();
 
-		void Get_Probability();
+		void Get_Initial_Probability();
 		void Update_Probability(int Spin_Initial, int Spin_Final);	
 
 		int Return_Probability_One();

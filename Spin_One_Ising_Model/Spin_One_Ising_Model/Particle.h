@@ -12,6 +12,7 @@ class Particle
 	void Flip_Spin_Up();
 	void Flip_Spin_Down();
 	int Return_Spin();
+	int Return_Max_Spin();
 	void Set_Spin(int Input_Spin);
 };
 

@@ -14,6 +14,11 @@ int Particle::Return_Spin()
 	return spin;
 }
 
+int Particle::Return_Max_Spin()
+{
+	return max_spin;
+}
+
 void Particle::Set_Spin(int Input)
 {
 	spin=Input;
