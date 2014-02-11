@@ -35,16 +35,15 @@ class System
 		void Choose_Particle();		
 		void Peturb_Particle();
 	
-		double Return_Local_Energy();
+		int Return_Local_Energy();
 		void Find_Total_Energy();
-		void Update_Energy(double Energy_Difference);
-		double Return_Energy();
+		void Update_Energy(int Energy_Difference);
+		int Return_Energy();
 		
 		void Set_Temp(double Temperature);
 		double Return_Temp();
 
 		void Get_Probability();
-
 		void Update_Probability(int Spin_Initial, int Spin_Final);	
 
 		int Return_Probability_One();

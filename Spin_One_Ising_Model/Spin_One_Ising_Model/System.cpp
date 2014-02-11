@@ -89,3 +89,45 @@ void System::Peturb_Particle()
 		}
 	}
 }
+
+int System::Return_Local_Energy()
+{
+		int Local_Energy = ((*Up[Current_Column][Current_Row]).Return_Spin() +
+							(*Down[Current_Column][Current_Row]).Return_Spin() +
+							(*Left[Current_Column][Current_Row]).Return_Spin() +
+							(*Right[Current_Column][Current_Row]).Return_Spin())*Lattice[Current_Column][Current_Row].Return_Spin();
+
+		return Local_Energy;
+}
+
+void System::Find_Total_Energy()
+{
+	int Total;
+
+	for(int i=0; i<ISINGSIZE; i++)
+	{
+		for(int j=0; j<ISINGSIZE; j++)
+		{
+			Current_Row=i;
+			Current_Column=j;
+
+			Total = Total + Return_Local_Energy();
+		}
+	}
+
+	Energy = Total*0.5;
+	return;
+}
+
+int System::Return_Energy()
+{
+	return Energy;
+}
+
+void System::Update_Energy(int Energy_Difference)
+{
+	Energy=Energy+Energy_Difference;
+	return;
+}
+
+
