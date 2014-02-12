@@ -11,6 +11,8 @@ System::System()
 
 	//int Lattice[ISINGSIZE][ISINGSIZE]; //define the main lattice
 
+	Number_of_Lattices = 2;
+
 	for(int x=0; x<(ISINGSIZE); x++)
 		for(int y=0; y<(ISINGSIZE); y++)
 		{
@@ -25,6 +27,15 @@ System::System()
 			for(int x=0; x<ISINGSIZE; x++)
 			{
 
+				if(x%2==y%2)
+				{
+					Lattice[x][y].Set_Lattice(0);
+				}
+				else
+				{
+					Lattice[x][y].Set_Lattice(1);
+				}
+
 				Up[x][y].spin=&Lattice[x][(ISINGSIZE+y-1)%(ISINGSIZE)].spin;		//set the surrounding lattice values 
 				Down[x][y].spin=&Lattice[x][(ISINGSIZE+y+1)%(ISINGSIZE)].spin;	// equal to those in correct positions
 				Left[x][y].spin=&Lattice[(ISINGSIZE+x-1)%(ISINGSIZE)][y].spin;			// in lattice
@@ -33,13 +44,13 @@ System::System()
 			}
 		}
 
-	Find_Total_Energy();
-	Get_Probability();
-	
-	Current_Column=0;
-	Current_Row=0;
+		Find_Total_Energy();
+		Get_Initial_Probability();
 
-	Set_Temp(0);
+		Current_Column=0;
+		Current_Row=0;
+
+		Set_Temp(0);
 
 		return;
 

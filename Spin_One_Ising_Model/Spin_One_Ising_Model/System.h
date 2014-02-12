@@ -17,17 +17,15 @@ class System
 		int Current_Column;
 		int Current_Row;
 		
-		int Probability[2];  //do dynamic allocation = max spin
+		int Probability[3];  //do dynamic allocation = max spin
 		
 		double Energy;
 		double Temp;
 		double One_Over_Temp;
 		int Anti_or_Ferro;
-
-		int Magnetism_Lattice_One;
-		int Magnetism_Lattice_Two;
-		int Magnetism_Lattice_Three;
-
+		int Number_of_Lattices;
+		int Magnetism[2];
+		
 		float Generate_Random_Number();
 		
 	public:
@@ -50,21 +48,13 @@ class System
 		int Return_Probability_Zero();
 		int Return_Probability_Minus_One();
 
-		int Set_Up_Magnetism_One();
-		int Set_Up_Magnetism_Two();
+		void Set_Up_Magnetism();
 		
-		int Get_Lattice();
-
-		void Update_Magnetism_One(int Magnetism_Change);
-		void Update_Magnetism_Two(int Magnetism_Change);
-		
+		void Update_Magnetism(int Magnetism_Change);
+				
 		int Return_Magnetism_One();
 		int Return_Magnetism_Two();
 		
-		void Set_A_or_F(int A_or_F);
-
 };
-
-
 
 #endif

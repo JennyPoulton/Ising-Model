@@ -54,3 +54,14 @@ void Particle::Flip_Spin_Down()
 	}
 
 }
+
+int Particle::Return_Lattice()
+{
+	return lattice;
+}
+
+void Particle::Set_Lattice(int Current_Lattice)
+{
+	lattice = Current_Lattice;
+	return;
+}

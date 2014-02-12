@@ -180,3 +180,37 @@ int System::Return_Probability_Minus_One()
 {
 	return Probability[-1+Lattice[0][0].Return_Max_Spin()];
 }
+
+void System::Set_Up_Magnetism()
+{
+	for(int i=0; i<Number_of_Lattices; i++)
+	{
+		Magnetism[i]=0;
+	}
+
+	for(int i=0; i<ISINGSIZE; i++)
+	{
+		for(int j=0; j<ISINGSIZE; j++)
+		{
+			Magnetism[Lattice[i][j].Return_Lattice()]++;
+		}
+	}
+	return;
+}
+
+void System::Update_Magnetism(int Magnetism_Change)
+{
+	Magnetism[Lattice[Current_Column][Current_Row].Return_Lattice()] = Magnetism[Lattice[Current_Column][Current_Row].Return_Lattice()] + Magnetism_Change;
+	return;
+}
+
+int System::Return_Magnetism_One()
+{
+	return Magnetism[0];
+}
+
+int System::Return_Magnetism_Two()
+{
+	return Magnetism[1];
+}
+
