@@ -36,10 +36,10 @@ System::System()
 					Lattice[x][y].Set_Lattice(1);
 				}
 
-				Up[x][y].spin=&Lattice[x][(ISINGSIZE+y-1)%(ISINGSIZE)].spin;		//set the surrounding lattice values 
-				Down[x][y].spin=&Lattice[x][(ISINGSIZE+y+1)%(ISINGSIZE)].spin;	// equal to those in correct positions
-				Left[x][y].spin=&Lattice[(ISINGSIZE+x-1)%(ISINGSIZE)][y].spin;			// in lattice
-				Right[x][y].spin=&Lattice[(ISINGSIZE+x+1)%(ISINGSIZE)][y].spin;
+				Up[x][y]=&Lattice[x][(ISINGSIZE+y-1)%(ISINGSIZE)];		//set the surrounding lattice values 
+				Down[x][y]=&Lattice[x][(ISINGSIZE+y+1)%(ISINGSIZE)];	// equal to those in correct positions
+				Left[x][y]=&Lattice[(ISINGSIZE+x-1)%(ISINGSIZE)][y];			// in lattice
+				Right[x][y]=&Lattice[(ISINGSIZE+x+1)%(ISINGSIZE)][y];
 
 			}
 		}
