@@ -60,6 +60,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="Main.cpp" />
     <ClCompile Include="NeighboursPointers.cpp" />
     <ClCompile Include="Particle.cpp" />
     <ClCompile Include="System.cpp" />

@@ -44,14 +44,8 @@ void System::Peturb_Particle()
 		Update_Probability(Initial_Spin, Final_Spin);
 		Update_Energy(Energy_Change);
 
-		if(Current_Row%2==Current_Column%2)
-		{
-			Update_Magnetism_One(Spin_Change);
-		}
-		else
-		{
-			Update_Magnetism_Two(Spin_Change);
-		}
+		Update_Magnetism(Spin_Change);
+		
 	}
 	else
 	{
@@ -78,15 +72,8 @@ void System::Peturb_Particle()
 		
 		Update_Probability(Initial_Spin, Final_Spin);
 		Update_Energy(Energy_Change);
-
-		if(Current_Row%2==Current_Column%2)
-		{
-			Update_Magnetism_One(Spin_Change);
-		}
-		else
-		{
-			Update_Magnetism_Two(Spin_Change);
-		}
+		Update_Magnetism(Spin_Change);
+		
 	}
 }
 
