@@ -1,5 +1,6 @@
 #define ISINGSIZE 30 //must be a multiple of 3
-#define MAXSPIN 2
+#define MAXSPIN 1
+
 
 #ifndef SYSTEM_HEADER
 #define SYSTEM_HEADER

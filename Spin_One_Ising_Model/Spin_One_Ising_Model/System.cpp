@@ -12,8 +12,8 @@ void System::Choose_Particle()
 	//Current_Row = Generate_Random_Number()*ISINGSIZE;
 	//Current_Row = Generate_Random_Number()*ISINGSIZE;
 
-	Current_Row = rand()*ISINGSIZE/RAND_MAX;
-	Current_Column = rand()*ISINGSIZE/RAND_MAX;
+	Current_Row = rand()%(ISINGSIZE);
+	Current_Column = rand()%(ISINGSIZE);
 
 	return;
 }
@@ -85,10 +85,10 @@ void System::Peturb_Particle()
 
 int System::Return_Local_Energy()
 {
-		int Local_Energy = ((*Up[Current_Column][Current_Row]).Return_Spin() +
-							(*Down[Current_Column][Current_Row]).Return_Spin() +
-							(*Left[Current_Column][Current_Row]).Return_Spin() +
-							(*Right[Current_Column][Current_Row]).Return_Spin())*Lattice[Current_Column][Current_Row].Return_Spin();
+		int Local_Energy = ((*Up[Current_Row][Current_Column]).Return_Spin() +
+							(*Down[Current_Row][Current_Column]).Return_Spin() +
+							(*Left[Current_Row][Current_Column]).Return_Spin() +
+							(*Right[Current_Row][Current_Column]).Return_Spin())*Lattice[Current_Row][Current_Column].Return_Spin();
 
 		return Local_Energy;
 }
@@ -193,7 +193,7 @@ void System::Set_Up_Magnetism()
 
 void System::Update_Magnetism(int Magnetism_Change)
 {
-	Magnetism[Lattice[Current_Column][Current_Row].Return_Lattice()] = Magnetism[Lattice[Current_Column][Current_Row].Return_Lattice()] + Magnetism_Change;
+	Magnetism[Lattice[Current_Row][Current_Column].Return_Lattice()] = Magnetism[Lattice[Current_Row][Current_Column].Return_Lattice()] + Magnetism_Change;
 	return;
 }
 

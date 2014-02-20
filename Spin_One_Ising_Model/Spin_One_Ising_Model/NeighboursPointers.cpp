@@ -36,10 +36,10 @@ System::System()
 					Lattice[x][y].Set_Lattice(1);
 				}
 
-				Up[x][y]=&Lattice[x][(ISINGSIZE+y-1)%(ISINGSIZE)];		//set the surrounding lattice values 
-				Down[x][y]=&Lattice[x][(y+1)%(ISINGSIZE)];	// equal to those in correct positions
-				Left[x][y]=&Lattice[(ISINGSIZE+x-1)%(ISINGSIZE)][y];			// in lattice
-				Right[x][y]=&Lattice[(x+1)%(ISINGSIZE)][y];
+				Up[x][y]=&Lattice[x][(ISINGSIZE+y-1)%(ISINGSIZE-1)];		//set the surrounding lattice values 
+				Down[x][y]=&Lattice[x][(y+1)%(ISINGSIZE-1)];	// equal to those in correct positions
+				Left[x][y]=&Lattice[(ISINGSIZE+x-1)%(ISINGSIZE-1)][y];			// in lattice
+				Right[x][y]=&Lattice[(x+1)%(ISINGSIZE-1)][y];
 
 			}
 		}
