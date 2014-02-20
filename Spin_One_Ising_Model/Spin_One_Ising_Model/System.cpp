@@ -1,24 +1,28 @@
 #include <cmath>
 #include <stdlib.h>
-#include <boost/random/mersenne_twister.hpp>
-#include <boost/random/uniform_int_distribution.hpp>
+//#include <boost/random/mersenne_twister.hpp>
+//#include <boost/random/uniform_int_distribution.hpp>
 #include "Particle.h"
 #include "System.h"
 using namespace std;
-boost::random::mt19937 gen;
+//boost::random::mt19937 gen;
 
 void System::Choose_Particle()
 {
-	Current_Row = Generate_Random_Number()*ISINGSIZE;
-	Current_Row = Generate_Random_Number()*ISINGSIZE;
+	//Current_Row = Generate_Random_Number()*ISINGSIZE;
+	//Current_Row = Generate_Random_Number()*ISINGSIZE;
+
+	Current_Row = rand()*ISINGSIZE;
+	Current_Row = rand()*ISINGSIZE;
 
 	return;
 }
 
 void System::Peturb_Particle()
 {
-	float rand = Generate_Random_Number();
-	if(rand>0.5)
+	//float rand = Generate_Random_Number();
+	float random = rand();
+	if(random>0.5)
 	{
 		int Initial_Energy = Return_Local_Energy();
 		int Initial_Spin = Lattice[Current_Row][Current_Column].Return_Spin();
@@ -33,7 +37,8 @@ void System::Peturb_Particle()
 		{
 			double Monte_Carlo = exp(-Energy_Change*One_Over_Temp);
 
-			if(Monte_Carlo<Generate_Random_Number())
+			//if(Monte_Carlo<Generate_Random_Number())
+			if(Monte_Carlo<rand())
 			{
 				Lattice[Current_Row][Current_Column].Flip_Spin_Down();
 
@@ -62,7 +67,8 @@ void System::Peturb_Particle()
 		{
 			double Monte_Carlo = exp(-Energy_Change*One_Over_Temp);
 
-			if(Monte_Carlo<Generate_Random_Number())
+			//if(Monte_Carlo<Generate_Random_Number())
+			if(Monte_Carlo<rand())
 			{
 				Lattice[Current_Row][Current_Column].Flip_Spin_Up();
 
@@ -89,7 +95,7 @@ int System::Return_Local_Energy()
 
 void System::Find_Total_Energy()
 {
-	int Total;
+	int Total=0;
 
 	for(int i=0; i<ISINGSIZE; i++)
 	{

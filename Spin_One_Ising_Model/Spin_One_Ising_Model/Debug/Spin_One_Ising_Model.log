@@ -1,13 +1,23 @@
-﻿Build started 15/02/2014 14:29:35.
+﻿Build started 19/02/2014 19:04:17.
      1>Project "C:\Users\Jenny\Ising Model\Spin_One_Ising_Model\Spin_One_Ising_Model\Spin_One_Ising_Model.vcxproj" on node 2 (build target(s)).
      1>InitializeBuildStatus:
-         Touching "Debug\Spin_One_Ising_Model.unsuccessfulbuild".
+         Creating "Debug\Spin_One_Ising_Model.unsuccessfulbuild" because "AlwaysCreate" was specified.
        ClCompile:
-         c:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /Od /Oy- /D _MBCS /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc100.pdb" /Gd /TP /analyze- /errorReport:prompt System.cpp
-         System.cpp
-     1>c:\users\jenny\ising model\spin_one_ising_model\spin_one_ising_model\system.cpp(3): fatal error C1083: Cannot open include file: 'boost/random/mersenne_twister.hpp': No such file or directory
-     1>Done Building Project "C:\Users\Jenny\Ising Model\Spin_One_Ising_Model\Spin_One_Ising_Model\Spin_One_Ising_Model.vcxproj" (build target(s)) -- FAILED.
+         All outputs are up-to-date.
+       Link:
+         c:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\Jenny\Ising Model\Spin_One_Ising_Model\Debug\Spin_One_Ising_Model.exe" /NOLOGO /LIBPATH:C:\Users\Jenny\Downloads\boost_1_54_0 kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /ManifestFile:"Debug\Spin_One_Ising_Model.exe.intermediate.manifest" /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /DEBUG /PDB:"C:\Users\Jenny\Ising Model\Spin_One_Ising_Model\Debug\Spin_One_Ising_Model.pdb" /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\Users\Jenny\Ising Model\Spin_One_Ising_Model\Debug\Spin_One_Ising_Model.lib" /MACHINE:X86 Debug\Main.obj
+         Debug\NeighboursPointers.obj
+         Debug\Particle.obj
+         Debug\System.obj
+         LINK : C:\Users\Jenny\Ising Model\Spin_One_Ising_Model\Debug\Spin_One_Ising_Model.exe not found or not built by the last incremental link; performing full link
+         Spin_One_Ising_Model.vcxproj -> C:\Users\Jenny\Ising Model\Spin_One_Ising_Model\Debug\Spin_One_Ising_Model.exe
+       Manifest:
+         C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\bin\mt.exe /nologo /verbose /outputresource:"C:\Users\Jenny\Ising Model\Spin_One_Ising_Model\Debug\Spin_One_Ising_Model.exe;#1" /manifest Debug\Spin_One_Ising_Model.exe.intermediate.manifest
+       FinalizeBuildStatus:
+         Deleting file "Debug\Spin_One_Ising_Model.unsuccessfulbuild".
+         Touching "Debug\Spin_One_Ising_Model.lastbuildstate".
+     1>Done Building Project "C:\Users\Jenny\Ising Model\Spin_One_Ising_Model\Spin_One_Ising_Model\Spin_One_Ising_Model.vcxproj" (build target(s)).
 
-Build FAILED.
+Build succeeded.
 
-Time Elapsed 00:00:00.14
+Time Elapsed 00:00:00.74
