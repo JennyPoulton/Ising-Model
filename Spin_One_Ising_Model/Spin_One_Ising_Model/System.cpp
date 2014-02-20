@@ -12,8 +12,8 @@ void System::Choose_Particle()
 	//Current_Row = Generate_Random_Number()*ISINGSIZE;
 	//Current_Row = Generate_Random_Number()*ISINGSIZE;
 
-	Current_Row = rand()*ISINGSIZE;
-	Current_Row = rand()*ISINGSIZE;
+	Current_Row = rand()*ISINGSIZE/RAND_MAX;
+	Current_Column = rand()*ISINGSIZE/RAND_MAX;
 
 	return;
 }
@@ -21,7 +21,7 @@ void System::Choose_Particle()
 void System::Peturb_Particle()
 {
 	//float rand = Generate_Random_Number();
-	float random = rand();
+	float random = rand()/RAND_MAX;
 	if(random>0.5)
 	{
 		int Initial_Energy = Return_Local_Energy();
@@ -38,7 +38,7 @@ void System::Peturb_Particle()
 			double Monte_Carlo = exp(-Energy_Change*One_Over_Temp);
 
 			//if(Monte_Carlo<Generate_Random_Number())
-			if(Monte_Carlo<rand())
+			if(Monte_Carlo<(rand()/RAND_MAX))
 			{
 				Lattice[Current_Row][Current_Column].Flip_Spin_Down();
 
@@ -68,7 +68,7 @@ void System::Peturb_Particle()
 			double Monte_Carlo = exp(-Energy_Change*One_Over_Temp);
 
 			//if(Monte_Carlo<Generate_Random_Number())
-			if(Monte_Carlo<rand())
+			if(Monte_Carlo<(rand()/RAND_MAX))
 			{
 				Lattice[Current_Row][Current_Column].Flip_Spin_Up();
 
@@ -136,7 +136,7 @@ double System::Return_Temp()
 
 void System::Get_Initial_Probability()
 {
-	for(int i=0; i<Lattice[0][0].Return_Max_Spin(); i++)
+	for(int i=0; i<MAXSPIN; i++)
 	{
 		Probability[i]=0;
 	}
@@ -146,32 +146,32 @@ void System::Get_Initial_Probability()
 		for(int j=0; j<ISINGSIZE; j++)
 		{
 			
-			Probability[Lattice[i][j].Return_Spin()+Lattice[i][j].Return_Max_Spin()]++;
+			Probability[Lattice[i][j].Return_Spin()+MAXSPIN]++;
 
 		}
 	}
 }
 
-void System::Update_Probability(int Initial_Spin, int Final_Spin)
+void System::Update_Probability(int InitialSpin, int FinalSpin)
 {
-	Probability[Initial_Spin+Lattice[0][0].Return_Max_Spin()]--;
-	Probability[Final_Spin+Lattice[0][0].Return_Max_Spin()]++;
+	Probability[InitialSpin+MAXSPIN]--;
+	Probability[FinalSpin+MAXSPIN]++;
 	return;
 }
 
 int System::Return_Probability_One()
 {
-	return Probability[1+Lattice[0][0].Return_Max_Spin()];
+	return Probability[1+MAXSPIN];
 }
 
 int System::Return_Probability_Zero()
 {
-	return Probability[0+Lattice[0][0].Return_Max_Spin()];
+	return Probability[0+MAXSPIN];
 }
 
 int System::Return_Probability_Minus_One()
 {
-	return Probability[-1+Lattice[0][0].Return_Max_Spin()];
+	return Probability[-1+MAXSPIN];
 }
 
 void System::Set_Up_Magnetism()

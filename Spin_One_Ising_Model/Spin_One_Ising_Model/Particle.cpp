@@ -6,6 +6,7 @@ Particle::Particle()
 {
 	spin=1;
 	max_spin=1;
+	lattice=0;
 	return;
 }
 

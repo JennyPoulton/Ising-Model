@@ -37,9 +37,9 @@ System::System()
 				}
 
 				Up[x][y]=&Lattice[x][(ISINGSIZE+y-1)%(ISINGSIZE)];		//set the surrounding lattice values 
-				Down[x][y]=&Lattice[x][(ISINGSIZE+y+1)%(ISINGSIZE)];	// equal to those in correct positions
+				Down[x][y]=&Lattice[x][(y+1)%(ISINGSIZE)];	// equal to those in correct positions
 				Left[x][y]=&Lattice[(ISINGSIZE+x-1)%(ISINGSIZE)][y];			// in lattice
-				Right[x][y]=&Lattice[(ISINGSIZE+x+1)%(ISINGSIZE)][y];
+				Right[x][y]=&Lattice[(x+1)%(ISINGSIZE)][y];
 
 			}
 		}

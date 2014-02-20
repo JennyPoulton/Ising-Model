@@ -1,4 +1,5 @@
 #define ISINGSIZE 30 //must be a multiple of 3
+#define MAXSPIN 2
 
 #ifndef SYSTEM_HEADER
 #define SYSTEM_HEADER
@@ -17,8 +18,8 @@ class System
 		int Current_Column;
 		int Current_Row;
 		
-		int Probability[3];  //do dynamic allocation = max spin
-		
+		int Probability[MAXSPIN+1];  
+
 		double Energy;
 		double Temp;
 		double One_Over_Temp;
