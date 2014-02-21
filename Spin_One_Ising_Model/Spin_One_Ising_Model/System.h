@@ -1,5 +1,4 @@
-#define ISINGSIZE 30 //must be a multiple of 3
-#define MAXSPIN 1
+
 
 
 #ifndef SYSTEM_HEADER
@@ -19,14 +18,11 @@ class System
 		int Current_Column;
 		int Current_Row;
 		
-		int Probability[MAXSPIN+1];  
+		int Probability[SPINMODES];  
 
 		double Energy;
 		double Temp;
-		double One_Over_Temp;
-		int Anti_or_Ferro;
-		int Number_of_Lattices;
-		int Magnetism[2];
+		int Magnetism[LATTICE_NO];
 		
 		float Generate_Random_Number();
 		
@@ -38,7 +34,7 @@ class System
 		int Return_Local_Energy();
 		void Find_Total_Energy();
 		void Update_Energy(int Energy_Difference);
-		int Return_Energy();
+		double Return_Energy();
 		
 		void Set_Temp(double Temperature);
 		double Return_Temp();

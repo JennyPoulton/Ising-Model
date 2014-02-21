@@ -1,4 +1,4 @@
-#define ISINGSIZE 66 //must be a multiple of 3 and 2
+#define ISINGSIZE 12 //must be a multiple of 3 and 2
 
 #ifndef SYSTEM_HEADER
 #define SYSTEM_HEADER

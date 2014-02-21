@@ -5,7 +5,6 @@ using namespace std;
 Particle::Particle()
 {
 	spin=1;
-	max_spin=1;
 	lattice=0;
 	return;
 }
@@ -13,11 +12,6 @@ Particle::Particle()
 int Particle::Return_Spin()
 {
 	return spin;
-}
-
-int Particle::Return_Max_Spin()
-{
-	return max_spin;
 }
 
 void Particle::Set_Spin(int Input)
@@ -28,7 +22,7 @@ void Particle::Set_Spin(int Input)
 
 void Particle::Flip_Spin_Up()
 {
-	if(spin==max_spin)
+	if(spin==MAXSPIN)
 	{
 		spin=spin*(-1);
 		return;
@@ -43,7 +37,7 @@ void Particle::Flip_Spin_Up()
 
 void Particle::Flip_Spin_Down()
 {
-	if(spin==-max_spin)
+	if(spin==-MAXSPIN)
 	{
 		spin=spin*(-1);
 		return;

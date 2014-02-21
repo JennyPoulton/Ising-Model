@@ -10,7 +10,7 @@ using namespace std;
 void System::Choose_Particle()
 {
 	//Current_Row = Generate_Random_Number()*ISINGSIZE;
-	//Current_Row = Generate_Random_Number()*ISINGSIZE;
+	//Current_Column = Generate_Random_Number()*ISINGSIZE;
 
 	Current_Row = rand()%(ISINGSIZE);
 	Current_Column = rand()%(ISINGSIZE);
@@ -20,8 +20,9 @@ void System::Choose_Particle()
 
 void System::Peturb_Particle()
 {
-	//float rand = Generate_Random_Number();
-	float random = rand()/RAND_MAX;
+	//double rand = Generate_Random_Number();
+	double random = rand()/(double)RAND_MAX;
+
 	if(random>0.5)
 	{
 		int Initial_Energy = Return_Local_Energy();
@@ -30,15 +31,15 @@ void System::Peturb_Particle()
 		int Final_Energy = Return_Local_Energy();
 		int Final_Spin = Lattice[Current_Row][Current_Column].Return_Spin();
 
-		int Energy_Change = Initial_Energy-Final_Energy;
-		int Spin_Change = Initial_Spin-Final_Spin;
+		int Energy_Change = Final_Energy-Initial_Energy;
+		int Spin_Change = Final_Spin-Initial_Spin;
 
 		if(Energy_Change>0)
 		{
-			double Monte_Carlo = exp(-Energy_Change*One_Over_Temp);
-
+			double Monte_Carlo = exp(-(double)Energy_Change/Temp);
+			
 			//if(Monte_Carlo<Generate_Random_Number())
-			if(Monte_Carlo<(rand()/RAND_MAX))
+			if(Monte_Carlo<(rand()/(double)RAND_MAX))
 			{
 				Lattice[Current_Row][Current_Column].Flip_Spin_Down();
 
@@ -48,7 +49,6 @@ void System::Peturb_Particle()
 
 		Update_Probability(Initial_Spin, Final_Spin);
 		Update_Energy(Energy_Change);
-
 		Update_Magnetism(Spin_Change);
 		
 	}
@@ -60,15 +60,15 @@ void System::Peturb_Particle()
 		int Final_Energy = Return_Local_Energy();
 		int Final_Spin = Lattice[Current_Row][Current_Column].Return_Spin();
 
-		int Energy_Change = Initial_Energy-Final_Energy;
-		int Spin_Change = Initial_Spin-Final_Spin;
+		int Energy_Change = Final_Energy-Initial_Energy;
+		int Spin_Change = Final_Spin-Initial_Spin;
 
 		if(Energy_Change>0)
 		{
-			double Monte_Carlo = exp(-Energy_Change*One_Over_Temp);
+			double Monte_Carlo = exp(-(double)Energy_Change/Temp);
 
 			//if(Monte_Carlo<Generate_Random_Number())
-			if(Monte_Carlo<(rand()/RAND_MAX))
+			if(Monte_Carlo<(rand()/(double)RAND_MAX))
 			{
 				Lattice[Current_Row][Current_Column].Flip_Spin_Up();
 
@@ -107,19 +107,19 @@ void System::Find_Total_Energy()
 			Total = Total + Return_Local_Energy();
 		}
 	}
-
-	Energy = Total*0.5;
+	
+	Energy = (double)Total*(double)0.5;
 	return;
 }
 
-int System::Return_Energy()
+double System::Return_Energy()
 {
-	return Energy;
+	return (double)Energy;
 }
 
 void System::Update_Energy(int Energy_Difference)
 {
-	Energy=Energy+Energy_Difference;
+	Energy = Energy + (double)Energy_Difference;
 	return;
 }
 
@@ -136,7 +136,7 @@ double System::Return_Temp()
 
 void System::Get_Initial_Probability()
 {
-	for(int i=0; i<MAXSPIN; i++)
+	for(int i=0; i<SPINMODES; i++)
 	{
 		Probability[i]=0;
 	}
@@ -176,7 +176,7 @@ int System::Return_Probability_Minus_One()
 
 void System::Set_Up_Magnetism()
 {
-	for(int i=0; i<Number_of_Lattices; i++)
+	for(int i=0; i<LATTICE_NO; i++)
 	{
 		Magnetism[i]=0;
 	}
@@ -185,7 +185,7 @@ void System::Set_Up_Magnetism()
 	{
 		for(int j=0; j<ISINGSIZE; j++)
 		{
-			Magnetism[Lattice[i][j].Return_Lattice()]++;
+			Magnetism[Lattice[i][j].Return_Lattice()]=Magnetism[Lattice[i][j].Return_Lattice()]+Lattice[i][j].Return_Spin();
 		}
 	}
 	return;

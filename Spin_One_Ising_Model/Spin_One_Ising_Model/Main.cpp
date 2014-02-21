@@ -13,11 +13,11 @@ int main (void)
 
 	double Set_Heating_or_Cooling = 1; //heating = 1, cooling = -1
 	double Set_Initial_Temp = 0.0000000001;
-	double Set_Final_Temp = 10;
+	double Set_Final_Temp = 20;
 	double Set_Interval = 0.001;
 	int Number_Runs = 1000;
 	int Thermalisor = 1000;
-	double DIVISER=1/(float)(ISINGSIZE*ISINGSIZE);
+	double DIVISER=1/(double)(ISINGSIZE*ISINGSIZE);
 
 	srand(time(NULL));
 
@@ -79,8 +79,8 @@ int main (void)
 					Square_Lattice.Choose_Particle();
 					Square_Lattice.Peturb_Particle();
 
-					Energy_Pow_Two_Cumulant = Energy_Pow_Two_Cumulant + pow((float)Square_Lattice.Return_Energy(),2);
-					Energy_Cumulant = Energy_Cumulant + Square_Lattice.Return_Energy();
+					Energy_Pow_Two_Cumulant = Energy_Pow_Two_Cumulant + pow((double)Square_Lattice.Return_Energy(),2);
+					Energy_Cumulant = Energy_Cumulant + (double)Square_Lattice.Return_Energy();
 
 
 					Prob1_Cumulant = Prob1_Cumulant + (double)(Square_Lattice.Return_Probability_One())*(double)DIVISER;
@@ -91,8 +91,8 @@ int main (void)
 					Magnetism_One_Cumulant = Magnetism_One_Cumulant + (double)(Square_Lattice.Return_Magnetism_One())*2*(double)DIVISER;
 					Magnetism_Two_Cumulant = Magnetism_Two_Cumulant + (double)(Square_Lattice.Return_Magnetism_Two())*2*(double)DIVISER;
 
-					Magnetism_Pow_Two_One_Cumulant = Magnetism_Pow_Two_One_Cumulant + (double)(Square_Lattice.Return_Magnetism_One()*Square_Lattice.Return_Magnetism_One())*(double)DIVISER*(double)DIVISER*4;
-					Magnetism_Pow_Two_Two_Cumulant = Magnetism_Pow_Two_Two_Cumulant + (double)(Square_Lattice.Return_Magnetism_Two()*Square_Lattice.Return_Magnetism_Two())*(double)DIVISER*(double)DIVISER*4;
+					Magnetism_Pow_Two_One_Cumulant = Magnetism_Pow_Two_One_Cumulant + (double)(Square_Lattice.Return_Magnetism_One()*(double)Square_Lattice.Return_Magnetism_One())*(double)DIVISER*(double)DIVISER*4;
+					Magnetism_Pow_Two_Two_Cumulant = Magnetism_Pow_Two_Two_Cumulant + (double)(Square_Lattice.Return_Magnetism_Two()*(double)Square_Lattice.Return_Magnetism_Two())*(double)DIVISER*(double)DIVISER*4;
 				}
 
 
@@ -161,8 +161,8 @@ int main (void)
 					Square_Lattice.Choose_Particle();
 					Square_Lattice.Peturb_Particle();
 
-					Energy_Pow_Two_Cumulant = Energy_Pow_Two_Cumulant + Square_Lattice.Return_Energy()*Square_Lattice.Return_Energy();
-					Energy_Cumulant = Energy_Cumulant + Square_Lattice.Return_Energy();
+					Energy_Pow_Two_Cumulant = Energy_Pow_Two_Cumulant + (double)Square_Lattice.Return_Energy()*(double)Square_Lattice.Return_Energy();
+					Energy_Cumulant = Energy_Cumulant + (double)Square_Lattice.Return_Energy();
 
 
 					Prob1_Cumulant = Prob1_Cumulant + (double)(Square_Lattice.Return_Probability_One())*DIVISER;
@@ -173,8 +173,8 @@ int main (void)
 					Magnetism_One_Cumulant = Magnetism_One_Cumulant + (double)(Square_Lattice.Return_Magnetism_One())*(double)DIVISER*2;
 					Magnetism_Two_Cumulant = Magnetism_Two_Cumulant + (double)(Square_Lattice.Return_Magnetism_Two())*(double)DIVISER*2;
 
-					Magnetism_Pow_Two_One_Cumulant = Magnetism_Pow_Two_One_Cumulant + (double)(Square_Lattice.Return_Magnetism_One()*Square_Lattice.Return_Magnetism_One())*DIVISER*DIVISER*4;
-					Magnetism_Pow_Two_Two_Cumulant = Magnetism_Pow_Two_Two_Cumulant + (double)(Square_Lattice.Return_Magnetism_Two()*Square_Lattice.Return_Magnetism_Two())*DIVISER*DIVISER*4;
+					Magnetism_Pow_Two_One_Cumulant = Magnetism_Pow_Two_One_Cumulant + (double)(Square_Lattice.Return_Magnetism_One()*(double)Square_Lattice.Return_Magnetism_One())*DIVISER*DIVISER*4;
+					Magnetism_Pow_Two_Two_Cumulant = Magnetism_Pow_Two_Two_Cumulant + (double)(Square_Lattice.Return_Magnetism_Two()*(double)Square_Lattice.Return_Magnetism_Two())*DIVISER*DIVISER*4;
 				}
 
 
@@ -211,9 +211,6 @@ int main (void)
 			}
 		}
 		while(Temperature<20);//Entropy/(double)(ISINGSIZE*ISINGSIZE)<1.098);
-
-
-		cout << j << endl;
 	}
 
 	system("pause");

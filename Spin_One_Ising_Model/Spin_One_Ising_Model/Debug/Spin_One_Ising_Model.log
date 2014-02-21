@@ -1,11 +1,13 @@
-﻿Build started 20/02/2014 15:35:27.
+﻿Build started 21/02/2014 12:58:49.
      1>Project "C:\Users\Jenny\Ising Model\Spin_One_Ising_Model\Spin_One_Ising_Model\Spin_One_Ising_Model.vcxproj" on node 2 (build target(s)).
      1>InitializeBuildStatus:
          Creating "Debug\Spin_One_Ising_Model.unsuccessfulbuild" because "AlwaysCreate" was specified.
        ClCompile:
-         c:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /IC:\Users\Jenny\Downloads\boost_1_54_0 /ZI /nologo /W3 /WX- /Od /Oy- /D _MBCS /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc100.pdb" /Gd /TP /analyze- /errorReport:prompt Main.cpp
+         c:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /IC:\Users\Jenny\Downloads\boost_1_54_0 /ZI /nologo /W3 /WX- /Od /Oy- /D _MBCS /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc100.pdb" /Gd /TP /analyze- /errorReport:prompt Main.cpp System.cpp
+         System.cpp
          Main.cpp
      1>c:\users\jenny\ising model\spin_one_ising_model\spin_one_ising_model\main.cpp(22): warning C4244: 'argument' : conversion from 'time_t' to 'unsigned int', possible loss of data
+         Generating Code...
        Link:
          c:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\Jenny\Ising Model\Spin_One_Ising_Model\Debug\Spin_One_Ising_Model.exe" /NOLOGO /LIBPATH:C:\Users\Jenny\Downloads\boost_1_54_0 kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /ManifestFile:"Debug\Spin_One_Ising_Model.exe.intermediate.manifest" /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /DEBUG /PDB:"C:\Users\Jenny\Ising Model\Spin_One_Ising_Model\Debug\Spin_One_Ising_Model.pdb" /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\Users\Jenny\Ising Model\Spin_One_Ising_Model\Debug\Spin_One_Ising_Model.lib" /MACHINE:X86 Debug\Main.obj
          Debug\NeighboursPointers.obj
@@ -22,4 +24,4 @@
 
 Build succeeded.
 
-Time Elapsed 00:00:01.02
+Time Elapsed 00:00:01.85
