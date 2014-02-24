@@ -42,7 +42,6 @@ void System::Peturb_Particle()
 			if(Monte_Carlo<(rand()/(double)RAND_MAX))
 			{
 				Lattice[Current_Row][Current_Column].Flip_Spin_Down();
-
 				return;
 			}
 		}
@@ -119,7 +118,7 @@ double System::Return_Energy()
 
 void System::Update_Energy(int Energy_Difference)
 {
-	Energy = Energy + (double)Energy_Difference;
+	Energy = Energy + Energy_Difference;
 	return;
 }
 
