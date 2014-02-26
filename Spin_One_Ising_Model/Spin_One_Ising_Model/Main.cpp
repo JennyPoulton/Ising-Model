@@ -12,7 +12,7 @@ int main (void)
 {
 
 	double Set_Heating_or_Cooling = 1; //heating = 1, cooling = -1
-	double Set_Initial_Temp = 0.0000000001;
+	double Set_Initial_Temp = 0.1;
 	double Set_Final_Temp = 10;
 	double Set_Interval = 0.001;
 	int Number_Runs = 100*ISINGSIZE*ISINGSIZE;
@@ -91,7 +91,7 @@ int main (void)
 		double Energy_Pow_Two = Energy_Pow_Two_Cumulant/(double)Number_Runs;
 		double Energy = Energy_Cumulant/(double)Number_Runs;
 
-		double Heat_Capacity = ((Energy_Pow_Two)-pow(Energy,2))/(Temperature*Temperature);
+		double Heat_Capacity = ((Energy_Pow_Two)-(Energy*Energy))/(Temperature*Temperature);
 		double Heat_Capacity_Over_Temp = Heat_Capacity/Temperature;
 
 		double Prob3 = Prob3_Cumulant/(double)Number_Runs;
