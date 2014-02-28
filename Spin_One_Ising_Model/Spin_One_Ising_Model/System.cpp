@@ -7,14 +7,53 @@
 using namespace std;
 //boost::random::mt19937 gen;
 
-void System::Choose_Particle()
+void System::Peturb_Lattice_One()
 {
-	//Current_Row = Generate_Random_Number()*ISINGSIZE;
-	//Current_Column = Generate_Random_Number()*ISINGSIZE;
+	
+	for(int i=0; i<ISINGSIZE; i=i+2)
+	{
+		for(int j=0; j<ISINGSIZE; j=j+2)
+		{
+			Current_Column=i;
+			Current_Row=j;
+			Peturb_Particle();
+		}
+	}
 
-	Current_Row = rand()%(ISINGSIZE);
-	Current_Column = rand()%(ISINGSIZE);
+	for(int i=1; i<ISINGSIZE; i=i+2)
+	{
+		for(int j=1; j<ISINGSIZE; j=j+2)
+		{
+			Current_Column=i;
+			Current_Row=j;
+			Peturb_Particle();
+		}
+	}
+	return;
+}
 
+void System::Peturb_Lattice_Two()
+{
+
+	for(int i=0; i<ISINGSIZE; i=i+2)
+	{
+		for(int j=1; j<ISINGSIZE; j=j+2)
+		{
+			Current_Column=i;
+			Current_Row=j;
+			Peturb_Particle();
+		}
+	}
+
+	for(int i=1; i<ISINGSIZE; i=i+2)
+	{
+		for(int j=0; j<ISINGSIZE; j=j+2)
+		{
+			Current_Column=i;
+			Current_Row=j;
+			Peturb_Particle();
+		}
+	}
 	return;
 }
 

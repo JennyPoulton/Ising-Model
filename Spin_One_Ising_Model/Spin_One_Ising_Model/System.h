@@ -28,7 +28,10 @@ class System
 		
 	public:
 		System();
-		void Choose_Particle();		
+		
+		void Peturb_Lattice_One();
+		void Peturb_Lattice_Two();
+
 		void Peturb_Particle();
 	
 		int Return_Local_Energy();
