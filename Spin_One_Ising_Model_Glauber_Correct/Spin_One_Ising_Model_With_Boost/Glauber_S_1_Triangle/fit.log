@@ -1,0 +1,312 @@
+
+
+*******************************************************************************
+Mon Mar 10 11:59:34 2014
+
+
+FIT:    data read from "OutputMagnetisation6.txt" using 2:3
+        format = x:z
+	y range restricted to [0.00000 : 0.100000]
+        #datapoints = 1683
+        residuals are weighted equally (unit weight)
+
+function used for fitting: g(x)
+fitted parameters initialized with current variable values
+
+
+
+*******************************************************************************
+Mon Mar 10 11:59:54 2014
+
+
+FIT:    data read from "OutputMagnetisation6.txt" using 2:3
+        format = x:z
+	y range restricted to [0.00000 : 0.100000]
+        #datapoints = 1683
+        residuals are weighted equally (unit weight)
+
+function used for fitting: g(x)
+fitted parameters initialized with current variable values
+
+
+
+ Iteration 0
+ WSSR        : 3.39857           delta(WSSR)/WSSR   : 0
+ delta(WSSR) : 0                 limit for stopping : 1e-005
+ lambda	  : 0.707327
+
+initial set of free parameter values
+
+c               = 1
+d               = 1
+
+After 4 iterations the fit converged.
+final sum of squares of residuals : 0.000705238
+rel. change during last iteration : -1.64414e-010
+
+degrees of freedom    (FIT_NDF)                        : 1681
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 0.000647715
+variance of residuals (reduced chisquare) = WSSR/ndf   : 4.19535e-007
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+
+c               = 1.05804          +/- 2.041e-005   (0.001929%)
+d               = -0.532063        +/- 0.0008181    (0.1538%)
+
+
+correlation matrix of the fit parameters:
+
+               c      d      
+c               1.000 
+d              -0.633  1.000 
+
+
+*******************************************************************************
+Mon Mar 10 14:11:17 2014
+
+
+FIT:    data read from "OutputMagnetisation6.txt" using 2:3
+        format = x:z
+	y range restricted to [0.00000 : 0.100000]
+        #datapoints = 1683
+        residuals are weighted equally (unit weight)
+
+function used for fitting: g(x)
+fitted parameters initialized with current variable values
+
+
+
+ Iteration 0
+ WSSR        : 3.39857           delta(WSSR)/WSSR   : 0
+ delta(WSSR) : 0                 limit for stopping : 1e-005
+ lambda	  : 0.707327
+
+initial set of free parameter values
+
+c               = 1
+d               = 1
+
+After 4 iterations the fit converged.
+final sum of squares of residuals : 0.000705238
+rel. change during last iteration : -1.64414e-010
+
+degrees of freedom    (FIT_NDF)                        : 1681
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 0.000647715
+variance of residuals (reduced chisquare) = WSSR/ndf   : 4.19535e-007
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+
+c               = 1.05804          +/- 2.041e-005   (0.001929%)
+d               = -0.532063        +/- 0.0008181    (0.1538%)
+
+
+correlation matrix of the fit parameters:
+
+               c      d      
+c               1.000 
+d              -0.633  1.000 
+
+
+*******************************************************************************
+Mon Mar 10 14:12:50 2014
+
+
+FIT:    data read from "OutputMagnetisation12.txt" using 2:3
+        format = x:z
+	y range restricted to [0.00000 : 0.100000]
+        #datapoints = 1683
+        residuals are weighted equally (unit weight)
+
+function used for fitting: g(x)
+fitted parameters initialized with current variable values
+
+
+
+ Iteration 0
+ WSSR        : 0.0679592         delta(WSSR)/WSSR   : 0
+ delta(WSSR) : 0                 limit for stopping : 1e-005
+ lambda	  : 0.707327
+
+initial set of free parameter values
+
+c               = 1.05804
+d               = -0.532063
+
+After 3 iterations the fit converged.
+final sum of squares of residuals : 0.0006003
+rel. change during last iteration : -3.72254e-007
+
+degrees of freedom    (FIT_NDF)                        : 1681
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 0.000597586
+variance of residuals (reduced chisquare) = WSSR/ndf   : 3.57109e-007
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+
+c               = 1.06428          +/- 1.883e-005   (0.001769%)
+d               = -0.526592        +/- 0.0007547    (0.1433%)
+
+
+correlation matrix of the fit parameters:
+
+               c      d      
+c               1.000 
+d              -0.633  1.000 
+
+
+*******************************************************************************
+Mon Mar 10 14:13:35 2014
+
+
+FIT:    data read from "OutputMagnetisation18.txt" using 2:3
+        format = x:z
+	y range restricted to [0.00000 : 0.100000]
+        #datapoints = 1683
+        residuals are weighted equally (unit weight)
+
+function used for fitting: g(x)
+fitted parameters initialized with current variable values
+
+
+
+ Iteration 0
+ WSSR        : 0.40593           delta(WSSR)/WSSR   : 0
+ delta(WSSR) : 0                 limit for stopping : 1e-005
+ lambda	  : 0.707327
+
+initial set of free parameter values
+
+c               = 1.06428
+d               = -0.526592
+
+After 3 iterations the fit converged.
+final sum of squares of residuals : 0.000652652
+rel. change during last iteration : -1.46419e-007
+
+degrees of freedom    (FIT_NDF)                        : 1681
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 0.000623099
+variance of residuals (reduced chisquare) = WSSR/ndf   : 3.88252e-007
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+
+c               = 1.07985          +/- 1.963e-005   (0.001818%)
+d               = -0.529859        +/- 0.000787     (0.1485%)
+
+
+correlation matrix of the fit parameters:
+
+               c      d      
+c               1.000 
+d              -0.633  1.000 
+
+
+*******************************************************************************
+Mon Mar 10 15:25:02 2014
+
+
+FIT:    data read from "OutputMagnetisation24.txt" using 2:3
+        format = x:z
+	y range restricted to [0.00000 : 0.100000]
+        #datapoints = 1683
+        residuals are weighted equally (unit weight)
+
+function used for fitting: g(x)
+fitted parameters initialized with current variable values
+
+
+
+ Iteration 0
+ WSSR        : 0.0401312         delta(WSSR)/WSSR   : 0
+ delta(WSSR) : 0                 limit for stopping : 1e-005
+ lambda	  : 0.707327
+
+initial set of free parameter values
+
+c               = 1.07985
+d               = -0.529859
+
+After 3 iterations the fit converged.
+final sum of squares of residuals : 0.000626565
+rel. change during last iteration : -1.74349e-008
+
+degrees of freedom    (FIT_NDF)                        : 1681
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 0.000610519
+variance of residuals (reduced chisquare) = WSSR/ndf   : 3.72733e-007
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+
+c               = 1.08467          +/- 1.923e-005   (0.001773%)
+d               = -0.528595        +/- 0.0007711    (0.1459%)
+
+
+correlation matrix of the fit parameters:
+
+               c      d      
+c               1.000 
+d              -0.633  1.000 
+
+
+*******************************************************************************
+Mon Mar 10 16:45:45 2014
+
+
+FIT:    data read from "OutputMagnetisation24.txt" using 2:3
+        format = x:z
+	y range restricted to [0.00000 : 0.100000]
+        #datapoints = 1683
+        residuals are weighted equally (unit weight)
+
+function used for fitting: g(x)
+fitted parameters initialized with current variable values
+
+
+
+*******************************************************************************
+Mon Mar 10 16:45:52 2014
+
+
+FIT:    data read from "OutputMagnetisation24.txt" using 2:3
+        format = x:z
+	y range restricted to [0.00000 : 0.100000]
+        #datapoints = 1683
+        residuals are weighted equally (unit weight)
+
+function used for fitting: g(x)
+fitted parameters initialized with current variable values
+
+
+
+ Iteration 0
+ WSSR        : 7.6298            delta(WSSR)/WSSR   : 0
+ delta(WSSR) : 0                 limit for stopping : 1e-005
+ lambda	  : 0.707327
+
+initial set of free parameter values
+
+c               = 1
+d               = 1
+
+After 4 iterations the fit converged.
+final sum of squares of residuals : 0.000626565
+rel. change during last iteration : -1.84331e-010
+
+degrees of freedom    (FIT_NDF)                        : 1681
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 0.000610519
+variance of residuals (reduced chisquare) = WSSR/ndf   : 3.72733e-007
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+
+c               = 1.08467          +/- 1.923e-005   (0.001773%)
+d               = -0.528595        +/- 0.0007711    (0.1459%)
+
+
+correlation matrix of the fit parameters:
+
+               c      d      
+c               1.000 
+d              -0.633  1.000 

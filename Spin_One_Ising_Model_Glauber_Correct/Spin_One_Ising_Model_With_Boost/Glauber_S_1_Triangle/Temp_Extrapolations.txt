@@ -1,0 +1,5 @@
+lattice = 6	entropy = 1.05804 pm 2.041e-5
+lattice = 12	entropy = 1.06428 pm 1.883e-5
+lattice = 18	entropy = 1.07985 pm 1.963e-5
+lattice = 24	entropy = 1.08467 pm 1.923e-5
+lattice = 30	entropy = 1.08467 pm 1.923e-5
