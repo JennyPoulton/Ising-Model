@@ -24,7 +24,7 @@ void Particle::Flip_Spin_Up()
 {
 	if(spin==MAXSPIN)
 	{
-		spin=spin-1;
+		spin=spin*(-1);
 		return;
 	}
 	else
@@ -39,7 +39,7 @@ void Particle::Flip_Spin_Down()
 {
 	if(spin==-MAXSPIN)
 	{
-		spin=spin+1;
+		spin=spin*(-1);
 		return;
 	}
 	else

@@ -1,10 +1,11 @@
 #ifndef PARTICLE_HEADER
 #define PARTICLE_HEADER
 
-#define ISINGSIZE 60 //must be a multiple of 3
+ //must be a multiple of 3
 #define MAXSPIN 1
 #define LATTICE_NO 2
 #define SPINMODES 3
+#define ISINGSIZE 12
 
 class Particle
 {

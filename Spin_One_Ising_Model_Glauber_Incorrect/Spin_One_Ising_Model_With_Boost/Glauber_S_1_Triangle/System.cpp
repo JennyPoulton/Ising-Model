@@ -122,6 +122,62 @@ void System::Peturb_Particle()
 	double rand = Generate_Random_Number();
 	//double random = rand()/(double)RAND_MAX;
 
+	if(Lattice[Current_Row][Current_Column].Return_Spin()==MAXSPIN)
+	{
+		int Initial_Energy = Return_Local_Energy();
+		int Initial_Spin = Lattice[Current_Row][Current_Column].Return_Spin();
+		Lattice[Current_Row][Current_Column].Flip_Spin_Down();
+		int Final_Energy = Return_Local_Energy();
+		int Final_Spin = Lattice[Current_Row][Current_Column].Return_Spin();
+
+		int Energy_Change = Final_Energy-Initial_Energy;
+		int Spin_Change = Final_Spin-Initial_Spin;
+
+		if(Energy_Change>0)
+		{
+			double Monte_Carlo = exp(-(double)Energy_Change/Temp);
+
+			//if(Monte_Carlo<(rand()/(double)RAND_MAX))
+			if(Monte_Carlo<Generate_Random_Number())			
+			{
+				Lattice[Current_Row][Current_Column].Flip_Spin_Up();
+
+				return;
+			}
+		}
+		
+		Update_Probability(Initial_Spin, Final_Spin);
+		Update_Energy(Energy_Change);
+		Update_Magnetism(Spin_Change);
+	}
+	else if(Lattice[Current_Row][Current_Column].Return_Spin()==-MAXSPIN)
+	{
+		int Initial_Energy = Return_Local_Energy();
+		int Initial_Spin = Lattice[Current_Row][Current_Column].Return_Spin();
+		Lattice[Current_Row][Current_Column].Flip_Spin_Up();
+		int Final_Energy = Return_Local_Energy();
+		int Final_Spin = Lattice[Current_Row][Current_Column].Return_Spin();
+
+		int Energy_Change = Final_Energy-Initial_Energy;
+		int Spin_Change = Final_Spin-Initial_Spin;
+
+		if(Energy_Change>0)
+		{
+			double Monte_Carlo = exp(-(double)Energy_Change/Temp);
+			
+			//if(Monte_Carlo<(rand()/(double)RAND_MAX))
+			if(Monte_Carlo<Generate_Random_Number())			
+			{
+				Lattice[Current_Row][Current_Column].Flip_Spin_Down();
+				return;
+			}
+		}
+
+		Update_Probability(Initial_Spin, Final_Spin);
+		Update_Energy(Energy_Change);
+		Update_Magnetism(Spin_Change);
+	}
+	
 	if(rand>0.5)
 	{
 		int Initial_Energy = Return_Local_Energy();

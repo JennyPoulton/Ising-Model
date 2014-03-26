@@ -15,10 +15,11 @@ int main (void)
 	double Set_Final_Temp = 20;
 	double Set_Interval = 0.01;
 	int Number_Runs = 1000;
-	int Thermalisor = 1000;
+	int Thermalisor = 10000+(ISINGSIZE/6)*pow((float)(2*MAXSPIN+1),(float)6);
+	
 	//srand(time(NULL));
 
-	ofstream Output1("OutputMagnetisation.txt");
+	ofstream Output1("OutputMagnetisation12.txt");
 
 	if (!Output1.is_open())
 	{
@@ -29,6 +30,32 @@ int main (void)
 	else
 	{
 		cout << "Output 1 file opened successfully." << endl;
+	}
+
+	ofstream Output2("OutputMagnetisation18.txt");
+
+	if (!Output2.is_open())
+	{
+		cout << "Error: output file 2 cannot be opened." << endl;
+		system("pause");
+		return 1;
+	}
+	else
+	{
+		cout << "Output 2 file opened successfully." << endl;
+	}
+
+	ofstream Output3("OutputMagnetisation24.txt");
+
+	if (!Output3.is_open())
+	{
+		cout << "Error: output file 3 cannot be opened." << endl;
+		system("pause");
+		return 1;
+	}
+	else
+	{
+		cout << "Output 3 file opened successfully." << endl;
 	}
 
 	System Square_Lattice;
@@ -116,7 +143,7 @@ int main (void)
 
 		Entropy = Entropy + (Heat_Capacity_Over_Temp*Set_Interval);		
 	}
-
+		
 	system("pause");
 	return 0;
 

@@ -52,8 +52,11 @@ System::System()
 	Get_Initial_Probability();
 	Set_Up_Magnetism();
 
-	Current_Column=0;
-	Current_Row=0;
+	Current_Column_One=0;
+	Current_Row_One=0;
+
+	Current_Column_Two=0;
+	Current_Row_Two=0;
 
 	Set_Temp(0);
 
@@ -74,8 +77,9 @@ void System::Peturb_Lattice_One()
 	{
 		for(int j=0; j<ISINGSIZE; j=j+2)
 		{
-			Current_Column=i;
-			Current_Row=j;
+			Current_Column_One=i;
+			Current_Row_One=j;
+			Choose_Neighbour();
 			Peturb_Particle();
 		}
 	}
@@ -84,8 +88,9 @@ void System::Peturb_Lattice_One()
 	{
 		for(int j=1; j<ISINGSIZE; j=j+2)
 		{
-			Current_Column=i;
-			Current_Row=j;
+			Current_Column_One=i;
+			Current_Row_One=j;
+			Choose_Neighbour();
 			Peturb_Particle();
 		}
 	}
@@ -99,8 +104,9 @@ void System::Peturb_Lattice_Two()
 	{
 		for(int j=1; j<ISINGSIZE; j=j+2)
 		{
-			Current_Column=i;
-			Current_Row=j;
+			Current_Column_One=i;
+			Current_Row_One=j;
+			Choose_Neighbour();
 			Peturb_Particle();
 		}
 	}
@@ -109,12 +115,39 @@ void System::Peturb_Lattice_Two()
 	{
 		for(int j=0; j<ISINGSIZE; j=j+2)
 		{
-			Current_Column=i;
-			Current_Row=j;
+			Current_Column_One=i;
+			Current_Row_One=j;
+			Choose_Neighbour();
 			Peturb_Particle();
 		}
 	}
 	return;
+}
+
+void System::Choose_Neighbour()
+{
+	int Rand = rand()%4;
+
+	if(Rand==0)
+	{
+		Current_Column_Two = (Current_Column_One + 1)%ISINGSIZE;
+		Current_Row_Two = Current_Row_One;
+	}
+	else if(Rand==1)
+	{
+		Current_Column_Two = (Current_Column_One - 1 + ISINGSIZE)%ISINGSIZE;
+		Current_Row_Two = Current_Row_One;
+	}
+	else if(Rand==2)
+	{
+		Current_Column_Two = Current_Column_One;
+		Current_Row_Two = (Current_Row_One + 1)%ISINGSIZE;
+	}
+	else
+	{
+		Current_Column_Two = Current_Column_One;
+		Current_Row_Two = (Current_Row_One - 1 +ISINGSIZE)%ISINGSIZE;
+	}
 }
 
 void System::Peturb_Particle()
@@ -125,14 +158,21 @@ void System::Peturb_Particle()
 	if(rand>0.5)
 	{
 		int Initial_Energy = Return_Local_Energy();
-		int Initial_Spin = Lattice[Current_Row][Current_Column].Return_Spin();
-		Lattice[Current_Row][Current_Column].Flip_Spin_Up();
+		int Initial_Spin_One = Lattice[Current_Row_One][Current_Column_One].Return_Spin();
+		int Initial_Spin_Two = Lattice[Current_Row_Two][Current_Column_Two].Return_Spin();
+
+		Lattice[Current_Row_One][Current_Column_One].Flip_Spin_Up();
+		Lattice[Current_Row_Two][Current_Column_Two].Flip_Spin_Down();
+		
 		int Final_Energy = Return_Local_Energy();
-		int Final_Spin = Lattice[Current_Row][Current_Column].Return_Spin();
+		int Final_Spin_One = Lattice[Current_Row_One][Current_Column_One].Return_Spin();
+		int Final_Spin_Two = Lattice[Current_Row_Two][Current_Column_Two].Return_Spin();
+
 
 		int Energy_Change = Final_Energy-Initial_Energy;
-		int Spin_Change = Final_Spin-Initial_Spin;
-
+		int Spin_One_Change = Final_Spin_One-Initial_Spin_One;
+		int Spin_Two_Change = Final_Spin_Two-Initial_Spin_Two;
+		
 		if(Energy_Change>0)
 		{
 			double Monte_Carlo = exp(-(double)Energy_Change/Temp);
@@ -140,55 +180,69 @@ void System::Peturb_Particle()
 			//if(Monte_Carlo<(rand()/(double)RAND_MAX))
 			if(Monte_Carlo<Generate_Random_Number())			
 			{
-				Lattice[Current_Row][Current_Column].Flip_Spin_Down();
+				Lattice[Current_Row_One][Current_Column_One].Flip_Spin_Down();
+				Lattice[Current_Row_Two][Current_Column_Two].Flip_Spin_Up();
 				return;
 			}
 		}
 
-		Update_Probability(Initial_Spin, Final_Spin);
+		Update_Probability(Initial_Spin_One, Initial_Spin_Two, Final_Spin_One, Final_Spin_Two);
 		Update_Energy(Energy_Change);
-		Update_Magnetism(Spin_Change);
+		Update_Magnetism(Spin_One_Change, Spin_Two_Change);
 		
 	}
 	else
 	{
 		int Initial_Energy = Return_Local_Energy();
-		int Initial_Spin = Lattice[Current_Row][Current_Column].Return_Spin();
-		Lattice[Current_Row][Current_Column].Flip_Spin_Down();
+		int Initial_Spin_One = Lattice[Current_Row_One][Current_Column_One].Return_Spin();
+		int Initial_Spin_Two = Lattice[Current_Row_Two][Current_Column_Two].Return_Spin();
+
+		Lattice[Current_Row_One][Current_Column_One].Flip_Spin_Down();
+		Lattice[Current_Row_Two][Current_Column_Two].Flip_Spin_Up();
+		
 		int Final_Energy = Return_Local_Energy();
-		int Final_Spin = Lattice[Current_Row][Current_Column].Return_Spin();
+		int Final_Spin_One = Lattice[Current_Row_One][Current_Column_One].Return_Spin();
+		int Final_Spin_Two = Lattice[Current_Row_Two][Current_Column_Two].Return_Spin();
+
 
 		int Energy_Change = Final_Energy-Initial_Energy;
-		int Spin_Change = Final_Spin-Initial_Spin;
-
+		int Spin_One_Change = Final_Spin_One-Initial_Spin_One;
+		int Spin_Two_Change = Final_Spin_Two-Initial_Spin_Two;
+		
 		if(Energy_Change>0)
 		{
 			double Monte_Carlo = exp(-(double)Energy_Change/Temp);
-
+			
 			//if(Monte_Carlo<(rand()/(double)RAND_MAX))
 			if(Monte_Carlo<Generate_Random_Number())			
 			{
-				Lattice[Current_Row][Current_Column].Flip_Spin_Up();
-
+				Lattice[Current_Row_One][Current_Column_One].Flip_Spin_Up();
+				Lattice[Current_Row_Two][Current_Column_Two].Flip_Spin_Down();
 				return;
 			}
 		}
-		
-		Update_Probability(Initial_Spin, Final_Spin);
+
+		Update_Probability(Initial_Spin_One, Initial_Spin_Two, Final_Spin_One, Final_Spin_Two);
 		Update_Energy(Energy_Change);
-		Update_Magnetism(Spin_Change);
-		
+		Update_Magnetism(Spin_One_Change, Spin_Two_Change);
 	}
 }
 
 int System::Return_Local_Energy()
 {
-		int Local_Energy = ((*Up[Current_Row][Current_Column]).Return_Spin() +
-							(*Down[Current_Row][Current_Column]).Return_Spin() +
-							(*Left[Current_Row][Current_Column]).Return_Spin() +
-							(*Right[Current_Row][Current_Column]).Return_Spin())*Lattice[Current_Row][Current_Column].Return_Spin();
+		int Local_Energy1 = ((*Up[Current_Row_One][Current_Column_One]).Return_Spin() +
+							(*Down[Current_Row_One][Current_Column_One]).Return_Spin() +
+							(*Left[Current_Row_One][Current_Column_One]).Return_Spin() +
+							(*Right[Current_Row_One][Current_Column_One]).Return_Spin())*Lattice[Current_Row_One][Current_Column_One].Return_Spin();
+							
+		int Local_Energy2 = ((*Up[Current_Row_Two][Current_Column_Two]).Return_Spin() +
+							(*Down[Current_Row_Two][Current_Column_Two]).Return_Spin() +
+							(*Left[Current_Row_Two][Current_Column_Two]).Return_Spin() +
+							(*Right[Current_Row_Two][Current_Column_Two]).Return_Spin())*Lattice[Current_Row_Two][Current_Column_Two].Return_Spin();
+							
+		int Local_Energy3 = -(Lattice[Current_Row_One][Current_Column_One].Return_Spin()*Lattice[Current_Row_Two][Current_Column_Two].Return_Spin());
 
-		return Local_Energy;
+		return (Local_Energy1 + Local_Energy2 + Local_Energy3);
 }
 
 void System::Find_Total_Energy()
@@ -199,10 +253,13 @@ void System::Find_Total_Energy()
 	{
 		for(int j=0; j<ISINGSIZE; j++)
 		{
-			Current_Row=i;
-			Current_Column=j;
+			Current_Row_One=i;
+			Current_Column_One=j;
 
-			Total = Total + Return_Local_Energy();
+			Total = Total + ((*Up[Current_Row_One][Current_Column_One]).Return_Spin() +
+							(*Down[Current_Row_One][Current_Column_One]).Return_Spin() +
+							(*Left[Current_Row_One][Current_Column_One]).Return_Spin() +
+							(*Right[Current_Row_One][Current_Column_One]).Return_Spin())*Lattice[Current_Row_One][Current_Column_One].Return_Spin();
 		}
 	}
 	
@@ -250,10 +307,12 @@ void System::Get_Initial_Probability()
 	}
 }
 
-void System::Update_Probability(int InitialSpin, int FinalSpin)
+void System::Update_Probability(int InitialSpinOne, int FinalSpinOne, int InitialSpinTwo, int FinalSpinTwo)
 {
-	Probability[InitialSpin+MAXSPIN]--;
-	Probability[FinalSpin+MAXSPIN]++;
+	Probability[InitialSpinOne+MAXSPIN]--;
+	Probability[FinalSpinOne+MAXSPIN]++;
+	Probability[InitialSpinTwo+MAXSPIN]--;
+	Probability[FinalSpinTwo+MAXSPIN]++;
 	return;
 }
 
@@ -289,9 +348,10 @@ void System::Set_Up_Magnetism()
 	return;
 }
 
-void System::Update_Magnetism(int Magnetism_Change)
+void System::Update_Magnetism(int Magnetism_Change_One, int Magnetism_Change_Two)
 {
-	Magnetism[Lattice[Current_Row][Current_Column].Return_Lattice()] = Magnetism[Lattice[Current_Row][Current_Column].Return_Lattice()] + Magnetism_Change;
+	Magnetism[Lattice[Current_Row_One][Current_Column_One].Return_Lattice()] = Magnetism[Lattice[Current_Row_One][Current_Column_One].Return_Lattice()] + Magnetism_Change_One;
+	Magnetism[Lattice[Current_Row_Two][Current_Column_Two].Return_Lattice()] = Magnetism[Lattice[Current_Row_Two][Current_Column_Two].Return_Lattice()] + Magnetism_Change_Two;
 	return;
 }
 

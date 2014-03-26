@@ -12,8 +12,11 @@ class System
 		Particle* Left[ISINGSIZE][ISINGSIZE];
 		Particle* Right[ISINGSIZE][ISINGSIZE];
 
-		int Current_Column;
-		int Current_Row;
+		int Current_Column_One;
+		int Current_Row_One;
+
+		int Current_Column_Two;
+		int Current_Row_Two;
 		
 		int Probability[SPINMODES];  
 
@@ -29,6 +32,7 @@ class System
 		void Peturb_Lattice_One();
 		void Peturb_Lattice_Two();
 
+		void Choose_Neighbour();
 		void Peturb_Particle();
 	
 		int Return_Local_Energy();
@@ -40,7 +44,7 @@ class System
 		double Return_Temp();
 
 		void Get_Initial_Probability();
-		void Update_Probability(int Spin_Initial, int Spin_Final);	
+		void Update_Probability(int InitialSpinOne, int FinalSpinOne, int InitialSpinTwo, int FinalSpinTwo);
 
 		int Return_Probability_One();
 		int Return_Probability_Zero();
@@ -48,7 +52,7 @@ class System
 
 		void Set_Up_Magnetism();
 		
-		void Update_Magnetism(int Magnetism_Change);
+		void Update_Magnetism(int Magnetism_Change_One, int Magnetism_Change_Two);
 				
 		int Return_Magnetism_One();
 		int Return_Magnetism_Two();

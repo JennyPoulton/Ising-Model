@@ -15,7 +15,7 @@ int main (void)
 	double Set_Final_Temp = 20;
 	double Set_Interval = 0.01;
 	int Number_Runs = 1000;
-	int Thermalisor = 1000;
+	int Thermalisor = 10000+(ISINGSIZE/6)*pow((float)(2*MAXSPIN+1),(float)6);
 	srand(time(NULL));
 
 	ofstream Output1("OutputMagnetisation.txt");

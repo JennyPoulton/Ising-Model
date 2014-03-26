@@ -1,14 +1,15 @@
-﻿Build started 10/03/2014 16:47:40.
+﻿Build started 21/03/2014 12:40:32.
      1>Project "C:\Users\Jenny\Ising Model\Spin_One_Ising_Model_Glauber_Incorrect\Spin_One_Ising_Model_With_Boost\Glauber_S_1_Triangle\Glauber_S_1_Triangle.vcxproj" on node 2 (build target(s)).
      1>InitializeBuildStatus:
-         Creating "Debug\Glauber_S_1_Triangle.unsuccessfulbuild" because "AlwaysCreate" was specified.
+         Touching "Debug\Glauber_S_1_Triangle.unsuccessfulbuild".
        ClCompile:
          c:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /Od /Oy- /D _MBCS /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc100.pdb" /Gd /TP /analyze- /errorReport:prompt Main.cpp Particle.cpp System.cpp
-         Main.cpp
-         Generating Code...
-         Compiling...
          System.cpp
      1>c:\users\jenny\ising model\spin_one_ising_model_glauber_incorrect\spin_one_ising_model_with_boost\glauber_s_1_triangle\system.cpp(67): warning C4244: 'return' : conversion from 'double' to 'float', possible loss of data
+         Main.cpp
+     1>c:\users\jenny\ising model\spin_one_ising_model_glauber_incorrect\spin_one_ising_model_with_boost\glauber_s_1_triangle\main.cpp(18): warning C4244: 'initializing' : conversion from 'float' to 'int', possible loss of data
+         Generating Code...
+         Compiling...
          Particle.cpp
          Generating Code...
        Link:
@@ -26,4 +27,4 @@
 
 Build succeeded.
 
-Time Elapsed 00:00:02.31
+Time Elapsed 00:00:03.16
