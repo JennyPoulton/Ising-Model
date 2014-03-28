@@ -10,33 +10,25 @@ boost::random::mt19937 gen;
 System::System()
 {
 
-	for(int i=0; i<ISINGSIZE; i++)
-	{
-		for(int j=0; j<ISINGSIZE; j++)
-		{
-			if(i%2==j%2)
-			{
-				Lattice[i][j].Set_Spin(1);
-			}
-			else
-			{
-				Lattice[i][j].Set_Spin(-1);
-			}			
-		}
-	}
-
 	for(int y=0; y<ISINGSIZE; y++)
 	{
 		for(int x=0; x<ISINGSIZE; x++)
 		{
 
-			if(x%2==y%2)
+			if(x%3==y%3)
 			{
 				Lattice[x][y].Set_Lattice(0);
+				Lattice[x][y].Set_Spin(1);
 			}
-			else
+			else if(((x+1)%3)==y%3)
 			{
 				Lattice[x][y].Set_Lattice(1);
+				Lattice[x][y].Set_Spin(-1);
+			}
+			else if(((x+2)%3)==y%3)
+			{
+				Lattice[x][y].Set_Lattice(2);
+				Lattice[x][y].Set_Spin(0);
 			}
 
 			One[x][y]=&Lattice[x][(y+1)%(ISINGSIZE)];
@@ -309,3 +301,7 @@ int System::Return_Magnetism_Two()
 	return Magnetism[1];
 }
 
+int System::Return_Magnetism_Three()
+{
+	return Magnetism[2];
+}

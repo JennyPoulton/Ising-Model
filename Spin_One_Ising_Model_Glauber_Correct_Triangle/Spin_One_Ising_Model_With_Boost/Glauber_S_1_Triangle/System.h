@@ -54,6 +54,7 @@ class System
 				
 		int Return_Magnetism_One();
 		int Return_Magnetism_Two();
+		int Return_Magnetism_Three();
 		
 };
 

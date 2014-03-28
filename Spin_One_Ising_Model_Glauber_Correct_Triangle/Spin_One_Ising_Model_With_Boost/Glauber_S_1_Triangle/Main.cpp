@@ -47,6 +47,9 @@ int main (void)
 		double Magnetism_Two_Cumulant=0;
 		double Magnetism_Two_Pow_Four_Cumulant=0;
 		double Magnetism_Two_Pow_Two_Cumulant=0;
+		double Magnetism_Three_Cumulant = 0;
+		double Magnetism_Three_Pow_Four_Cumulant=0;
+		double Magnetism_Three_Pow_Two_Cumulant=0;
 		double Energy_Cumulant=0;
 		double Energy_Pow_Two_Cumulant=0;
 		double Prob3_Cumulant=0;
@@ -58,6 +61,7 @@ int main (void)
 		double Prob_neg3_Cumulant=0;
 		double Magnetism_Pow_Two_One_Cumulant=0;
 		double Magnetism_Pow_Two_Two_Cumulant=0;
+		double Magnetism_Pow_Two_Three_Cumulant=0;
 
 		for(int i=0; i<Thermalisor; i++)
 		{
@@ -82,9 +86,11 @@ int main (void)
 
 			Magnetism_One_Cumulant = Magnetism_One_Cumulant + (double)(Square_Lattice.Return_Magnetism_One())*0.5*Lattice_Diviser;
 			Magnetism_Two_Cumulant = Magnetism_Two_Cumulant + (double)(Square_Lattice.Return_Magnetism_Two())*0.5*Lattice_Diviser;
+			Magnetism_Three_Cumulant = Magnetism_Three_Cumulant + (double)(Square_Lattice.Return_Magnetism_Three())*0.5*Lattice_Diviser;
 
-			Magnetism_Pow_Two_One_Cumulant = Magnetism_Pow_Two_One_Cumulant + (double)(Square_Lattice.Return_Magnetism_One()*Square_Lattice.Return_Magnetism_One())*0.5*Lattice_Diviser;
-			Magnetism_Pow_Two_Two_Cumulant = Magnetism_Pow_Two_Two_Cumulant + (double)(Square_Lattice.Return_Magnetism_Two()*Square_Lattice.Return_Magnetism_Two())*0.5*Lattice_Diviser;
+			Magnetism_Pow_Two_One_Cumulant = Magnetism_Pow_Two_One_Cumulant + (double)(Square_Lattice.Return_Magnetism_One()*Square_Lattice.Return_Magnetism_One())*3*Lattice_Diviser;
+			Magnetism_Pow_Two_Two_Cumulant = Magnetism_Pow_Two_Two_Cumulant + (double)(Square_Lattice.Return_Magnetism_Two()*Square_Lattice.Return_Magnetism_Two())*3*Lattice_Diviser;
+			Magnetism_Pow_Two_Three_Cumulant = Magnetism_Pow_Two_Three_Cumulant + (double)(Square_Lattice.Return_Magnetism_Three()*Square_Lattice.Return_Magnetism_Three())*3*Lattice_Diviser;
 		}
 
 
@@ -104,15 +110,18 @@ int main (void)
 
 		double Magnetism_One = Magnetism_One_Cumulant*Runs_Diviser;
 		double Magnetism_Two = Magnetism_Two_Cumulant*Runs_Diviser;
+		double Magnetism_Three = Magnetism_Three_Cumulant*Runs_Diviser;
 
 		double Magnetism_Pow_Two_One = Magnetism_Pow_Two_One_Cumulant*Runs_Diviser;
 		double Magnetism_Pow_Two_Two = Magnetism_Pow_Two_Two_Cumulant*Runs_Diviser;
+		double Magnetism_Pow_Two_Three = Magnetism_Pow_Two_Three_Cumulant*Runs_Diviser;
 
 		double Susceptibility_One = (Magnetism_Pow_Two_One - Magnetism_One*Magnetism_One)/Temperature;
 		double Susceptibility_Two = (Magnetism_Pow_Two_Two - Magnetism_Two*Magnetism_Two)/Temperature;
+		double Susceptibility_Three = (Magnetism_Pow_Two_Three - Magnetism_Three*Magnetism_Three)/Temperature;
 
 		//Output1 << Temperature << "\t" << 1/(Temperature*Temperature) << "\t" << Entropy/(double)(ISINGSIZE*ISINGSIZE) << endl;
-		Output1 << Temperature << "\t" << 1/(Temperature*Temperature) << "\t" << Magnetism_One << "\t" << Magnetism_Two << "\t" << Susceptibility_One << "\t" << Susceptibility_Two << "\t" << Energy << "\t"<< Heat_Capacity << "\t"<<  Heat_Capacity_Over_Temp << "\t" << Entropy/(double)(ISINGSIZE*ISINGSIZE) << "\t" << Prob3 << "\t" << Prob2 << "\t" << Prob1 << "\t" << Prob0 << "\t" << Prob_neg1 << "\t" << Prob_neg2 << "\t" << Prob_neg3  << endl;
+		Output1 << Temperature << "\t" << Magnetism_One << "\t" << Magnetism_Two << "\t" << Magnetism_Three << "\t" << Susceptibility_One << "\t" << Susceptibility_Two << "\t" << Susceptibility_Three << "\t" << Energy << "\t"<< Heat_Capacity << "\t"<<  Heat_Capacity_Over_Temp << "\t" << Entropy/(double)(ISINGSIZE*ISINGSIZE) << "\t" << Prob3 << "\t" << Prob2 << "\t" << Prob1 << "\t" << Prob0 << "\t" << Prob_neg1 << "\t" << Prob_neg2 << "\t" << Prob_neg3  << endl;
 
 		Entropy = Entropy + (Heat_Capacity_Over_Temp*Set_Interval);		
 	}
