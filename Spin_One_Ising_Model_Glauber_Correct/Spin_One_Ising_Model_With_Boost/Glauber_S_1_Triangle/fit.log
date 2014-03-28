@@ -1092,3 +1092,144 @@ correlation matrix of the fit parameters:
                c      d      
 c               1.000 
 d              -0.926  1.000 
+
+
+*******************************************************************************
+Thu Mar 27 13:41:51 2014
+
+
+FIT:    data read from "OutputMagnetisation18.txt" using 2:3
+        format = x:z
+	y range restricted to [0.00000 : 0.0100000]
+        #datapoints = 900
+        residuals are weighted equally (unit weight)
+
+function used for fitting: g(x)
+fitted parameters initialized with current variable values
+
+
+
+ Iteration 0
+ WSSR        : 3.96331           delta(WSSR)/WSSR   : 0
+ delta(WSSR) : 0                 limit for stopping : 1e-005
+ lambda	  : 0.707118
+
+initial set of free parameter values
+
+c               = 1
+d               = 1
+
+After 5 iterations the fit converged.
+final sum of squares of residuals : 2.3595e-008
+rel. change during last iteration : -4.11776e-007
+
+degrees of freedom    (FIT_NDF)                        : 898
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 5.12592e-006
+variance of residuals (reduced chisquare) = WSSR/ndf   : 2.62751e-011
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+
+c               = 1.07397          +/- 4.842e-007   (4.509e-005%)
+d               = -0.456649        +/- 8.602e-005   (0.01884%)
+
+
+correlation matrix of the fit parameters:
+
+               c      d      
+c               1.000 
+d              -0.936  1.000 
+
+
+*******************************************************************************
+Thu Mar 27 13:42:08 2014
+
+
+FIT:    data read from "OutputMagnetisation18.txt" using 2:3
+        format = x:z
+	y range restricted to [0.00000 : 0.0100000]
+        #datapoints = 900
+        residuals are weighted equally (unit weight)
+
+function used for fitting: g(x)
+fitted parameters initialized with current variable values
+
+
+
+ Iteration 0
+ WSSR        : 2.3595e-008       delta(WSSR)/WSSR   : 0
+ delta(WSSR) : 0                 limit for stopping : 1e-005
+ lambda	  : 0.707118
+
+initial set of free parameter values
+
+c               = 1.07397
+d               = -0.456649
+
+After 1 iterations the fit converged.
+final sum of squares of residuals : 2.3595e-008
+rel. change during last iteration : -5.67931e-013
+
+degrees of freedom    (FIT_NDF)                        : 898
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 5.12592e-006
+variance of residuals (reduced chisquare) = WSSR/ndf   : 2.62751e-011
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+
+c               = 1.07397          +/- 4.842e-007   (4.509e-005%)
+d               = -0.456649        +/- 8.602e-005   (0.01884%)
+
+
+correlation matrix of the fit parameters:
+
+               c      d      
+c               1.000 
+d              -0.936  1.000 
+
+
+*******************************************************************************
+Thu Mar 27 14:15:04 2014
+
+
+FIT:    data read from "OutputMagnetisation12.txt" using 2:3
+        format = x:z
+	y range restricted to [0.00000 : 0.0100000]
+        #datapoints = 1000
+        residuals are weighted equally (unit weight)
+
+function used for fitting: g(x)
+fitted parameters initialized with current variable values
+
+
+
+ Iteration 0
+ WSSR        : 0.429878          delta(WSSR)/WSSR   : 0
+ delta(WSSR) : 0                 limit for stopping : 1e-005
+ lambda	  : 0.707117
+
+initial set of free parameter values
+
+c               = 1.07397
+d               = -0.456649
+
+After 3 iterations the fit converged.
+final sum of squares of residuals : 2.60896e-008
+rel. change during last iteration : -3.10781e-008
+
+degrees of freedom    (FIT_NDF)                        : 998
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 5.11291e-006
+variance of residuals (reduced chisquare) = WSSR/ndf   : 2.61419e-011
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+
+c               = 1.0947           +/- 4.276e-007   (3.906e-005%)
+d               = -0.456546        +/- 7.912e-005   (0.01733%)
+
+
+correlation matrix of the fit parameters:
+
+               c      d      
+c               1.000 
+d              -0.926  1.000 

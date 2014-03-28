@@ -39,10 +39,12 @@ System::System()
 				Lattice[x][y].Set_Lattice(1);
 			}
 
-			Up[x][y]=&Lattice[x][(ISINGSIZE+y-1)%(ISINGSIZE)];		//set the surrounding lattice values 
-			Down[x][y]=&Lattice[x][((y+1)%(ISINGSIZE))];	// equal to those in correct positions
-			Left[x][y]=&Lattice[(ISINGSIZE+x-1)%(ISINGSIZE)][y];			// in lattice
-			Right[x][y]=&Lattice[((x+1)%(ISINGSIZE))][y];
+			One[x][y]=&Lattice[x][(y+1)%(ISINGSIZE)];
+			Two[x][y]=&Lattice[(x+1)%(ISINGSIZE)][y];
+			Three[x][y]=&Lattice[(x+1)%(ISINGSIZE)][(y-1+ISINGSIZE)%(ISINGSIZE)];
+			Four[x][y]=&Lattice[x][(y-1+ISINGSIZE)%(ISINGSIZE)];
+			Five[x][y]=&Lattice[(x-1+ISINGSIZE)%(ISINGSIZE)][y];
+			Six[x][y]=&Lattice[(x-1+ISINGSIZE)%(ISINGSIZE)][(y+1)%(ISINGSIZE)];
 
 
 		}
@@ -230,15 +232,19 @@ void System::Peturb_Particle()
 
 int System::Return_Local_Energy()
 {
-		int Local_Energy = ((*Up[Current_Row_One][Current_Column_One]).Return_Spin() +
-							(*Down[Current_Row_One][Current_Column_One]).Return_Spin() +
-							(*Left[Current_Row_One][Current_Column_One]).Return_Spin() +
-							(*Right[Current_Row_One][Current_Column_One]).Return_Spin())*Lattice[Current_Row_One][Current_Column_One].Return_Spin()
+		int Local_Energy = ((*One[Current_Row_One][Current_Column_One]).Return_Spin() +
+							(*Two[Current_Row_One][Current_Column_One]).Return_Spin() +
+							(*Three[Current_Row_One][Current_Column_One]).Return_Spin() +
+							(*Four[Current_Row_One][Current_Column_One]).Return_Spin() +
+							(*Five[Current_Row_One][Current_Column_One]).Return_Spin() +
+							(*Six[Current_Row_One][Current_Column_One]).Return_Spin())*Lattice[Current_Row_One][Current_Column_One].Return_Spin()
 							
-							+((*Up[Current_Row_Two][Current_Column_Two]).Return_Spin() +
-							(*Down[Current_Row_Two][Current_Column_Two]).Return_Spin() +
-							(*Left[Current_Row_Two][Current_Column_Two]).Return_Spin() +
-							(*Right[Current_Row_Two][Current_Column_Two]).Return_Spin())*Lattice[Current_Row_Two][Current_Column_Two].Return_Spin()
+							+((*One[Current_Row_Two][Current_Column_Two]).Return_Spin() +
+							(*Two[Current_Row_Two][Current_Column_Two]).Return_Spin() +
+							(*Three[Current_Row_Two][Current_Column_Two]).Return_Spin() +
+							(*Four[Current_Row_Two][Current_Column_Two]).Return_Spin() +
+							(*Five[Current_Row_Two][Current_Column_Two]).Return_Spin() +
+							(*Six[Current_Row_Two][Current_Column_Two]).Return_Spin())*Lattice[Current_Row_Two][Current_Column_Two].Return_Spin()
 							
 							-(Lattice[Current_Row_One][Current_Column_One].Return_Spin()*Lattice[Current_Row_Two][Current_Column_Two].Return_Spin());
 
@@ -256,10 +262,12 @@ void System::Find_Total_Energy()
 			Current_Row_One=i;
 			Current_Column_One=j;
 
-			Total = Total + ((*Up[Current_Row_One][Current_Column_One]).Return_Spin() +
-							(*Down[Current_Row_One][Current_Column_One]).Return_Spin() +
-							(*Left[Current_Row_One][Current_Column_One]).Return_Spin() +
-							(*Right[Current_Row_One][Current_Column_One]).Return_Spin())*Lattice[Current_Row_One][Current_Column_One].Return_Spin();
+			Total = Total + ((*One[Current_Row_One][Current_Column_One]).Return_Spin() +
+							(*Two[Current_Row_One][Current_Column_One]).Return_Spin() +
+							(*Three[Current_Row_One][Current_Column_One]).Return_Spin() +
+							(*Four[Current_Row_One][Current_Column_One]).Return_Spin() +
+							(*Five[Current_Row_One][Current_Column_One]).Return_Spin() +
+							(*Six[Current_Row_One][Current_Column_One]).Return_Spin())*Lattice[Current_Row_One][Current_Column_One].Return_Spin();
 		}
 	}
 	

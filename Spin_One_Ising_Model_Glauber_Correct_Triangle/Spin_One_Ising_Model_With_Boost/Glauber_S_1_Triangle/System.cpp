@@ -44,7 +44,7 @@ System::System()
 			Three[x][y]=&Lattice[(x+1)%(ISINGSIZE)][(y-1+ISINGSIZE)%(ISINGSIZE)];
 			Four[x][y]=&Lattice[x][(y-1+ISINGSIZE)%(ISINGSIZE)];
 			Five[x][y]=&Lattice[(x-1+ISINGSIZE)%(ISINGSIZE)][y];
-			Three[x][y]=&Lattice[(x-1+ISINGSIZE)%(ISINGSIZE)][(y+1)%(ISINGSIZE)];//set the surrounding lattice values 
+			Six[x][y]=&Lattice[(x-1+ISINGSIZE)%(ISINGSIZE)][(y+1)%(ISINGSIZE)];//set the surrounding lattice values 
 			
 
 		}
@@ -185,14 +185,14 @@ void System::Peturb_Particle()
 
 int System::Return_Local_Energy()
 {
-		int Local_Energy = ((*One[Current_Row][Current_Column]).Return_Spin() +
-							(*Two[Current_Row][Current_Column]).Return_Spin() +
-							(*Three[Current_Row][Current_Column]).Return_Spin() +
-							(*Four[Current_Row][Current_Column]).Return_Spin() +
-							(*Five[Current_Row][Current_Column]).Return_Spin() +
-							(*Six[Current_Row][Current_Column]).Return_Spin())*Lattice[Current_Row][Current_Column].Return_Spin();
+		int Local_Energy1 = (*One[Current_Row][Current_Column]).Return_Spin()*Lattice[Current_Row][Current_Column].Return_Spin();
+		int Local_Energy2 =	(*Two[Current_Row][Current_Column]).Return_Spin()*Lattice[Current_Row][Current_Column].Return_Spin();
+		int Local_Energy3 =	(*Three[Current_Row][Current_Column]).Return_Spin()*Lattice[Current_Row][Current_Column].Return_Spin();
+		int Local_Energy4 =	(*Four[Current_Row][Current_Column]).Return_Spin()*Lattice[Current_Row][Current_Column].Return_Spin();
+		int Local_Energy5 =	(*Five[Current_Row][Current_Column]).Return_Spin()*Lattice[Current_Row][Current_Column].Return_Spin();
+		int Local_Energy6 =	(*Six[Current_Row][Current_Column]).Return_Spin()*Lattice[Current_Row][Current_Column].Return_Spin();
 
-		return Local_Energy;
+		return Local_Energy1 + Local_Energy2 + Local_Energy3 + Local_Energy4 + Local_Energy5 + Local_Energy6;
 }
 
 void System::Find_Total_Energy()

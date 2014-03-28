@@ -1,7 +1,7 @@
 #ifndef PARTICLE_HEADER
 #define PARTICLE_HEADER
 
-#define ISINGSIZE 18 //must be a multiple of 3
+#define ISINGSIZE 12 //must be a multiple of 3
 #define MAXSPIN 1
 #define LATTICE_NO 2
 #define SPINMODES 3

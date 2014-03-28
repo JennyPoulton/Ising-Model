@@ -7,10 +7,12 @@ class System
 {
 	private:
 		Particle Lattice[ISINGSIZE][ISINGSIZE];
-		Particle* Up[ISINGSIZE][ISINGSIZE];
-		Particle* Down[ISINGSIZE][ISINGSIZE];
-		Particle* Left[ISINGSIZE][ISINGSIZE];
-		Particle* Right[ISINGSIZE][ISINGSIZE];
+		Particle* One[ISINGSIZE][ISINGSIZE];
+		Particle* Two[ISINGSIZE][ISINGSIZE];
+		Particle* Three[ISINGSIZE][ISINGSIZE];
+		Particle* Four[ISINGSIZE][ISINGSIZE];
+		Particle* Five[ISINGSIZE][ISINGSIZE];
+		Particle* Six[ISINGSIZE][ISINGSIZE];
 
 		int Current_Column_One;
 		int Current_Row_One;
