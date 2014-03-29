@@ -1092,3 +1092,50 @@ correlation matrix of the fit parameters:
                c      d      
 c               1.000 
 d              -0.926  1.000 
+
+
+*******************************************************************************
+Fri Mar 28 21:44:39 2014
+
+
+FIT:    data read from "OutputMagnetisation.txt" using 2:3
+        format = x:z
+	y range restricted to [0.00000 : 0.0100000]
+        #datapoints = 463
+        residuals are weighted equally (unit weight)
+
+function used for fitting: g(x)
+fitted parameters initialized with current variable values
+
+
+
+ Iteration 0
+ WSSR        : 522.485           delta(WSSR)/WSSR   : 0
+ delta(WSSR) : 0                 limit for stopping : 1e-005
+ lambda	  : 0.707107
+
+initial set of free parameter values
+
+c               = 1.06239
+d               = -0.456435
+
+After 5 iterations the fit converged.
+final sum of squares of residuals : 8.26719e-005
+rel. change during last iteration : -3.85012e-006
+
+degrees of freedom    (FIT_NDF)                        : 461
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 0.000423476
+variance of residuals (reduced chisquare) = WSSR/ndf   : 1.79332e-007
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+
+c               = -2.25171e-005    +/- 3.217e-005   (142.9%)
+d               = -0.120183        +/- 0.07508      (62.47%)
+
+
+correlation matrix of the fit parameters:
+
+               c      d      
+c               1.000 
+d              -0.791  1.000 

@@ -122,7 +122,7 @@ void System::Peturb_Lattice_Two()
 
 void System::Choose_Neighbour()
 {
-	int Rand = (int)((Generate_Random_Number())*4);
+	int Rand = rand()%6;
 
 	if(Rand==0)
 	{
@@ -139,11 +139,22 @@ void System::Choose_Neighbour()
 		Current_Column_Two = Current_Column_One;
 		Current_Row_Two = (Current_Row_One + 1)%ISINGSIZE;
 	}
-	else if(Rand==4)
+	else if(Rand==3)
 	{
 		Current_Column_Two = Current_Column_One;
 		Current_Row_Two = (Current_Row_One - 1 +ISINGSIZE)%ISINGSIZE;
 	}
+	else if(Rand==4)
+	{
+		Current_Column_Two = (Current_Column_One+1)%ISINGSIZE;
+		Current_Row_Two = (Current_Row_One - 1 +ISINGSIZE)%ISINGSIZE;
+	}
+	else if(Rand==5)
+	{
+		Current_Column_Two = (Current_Column_One-1+ISINGSIZE)%ISINGSIZE;
+		Current_Row_Two = (Current_Row_One+1)%ISINGSIZE;
+	}
+
 }
 
 void System::Peturb_Particle()
@@ -371,4 +382,3 @@ int System::Return_Magnetism_Three()
 {
 	return Magnetism[2];
 }
-
